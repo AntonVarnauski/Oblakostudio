@@ -33,7 +33,6 @@
     }
 
     &--active {
-
       &::after {
         content: "";
         position: absolute;
@@ -62,7 +61,6 @@
 }
 
 .contact {
-
   &__list {
     @include flex();
   }
