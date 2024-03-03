@@ -58,6 +58,12 @@
 
 .logo {
   margin-right: 55px;
+  transition: 0.5s;
+  &:hover {
+    transform: scale(1.1);
+    opacity: 0.6;
+    transition: 0.5s;
+  }
 }
 
 .contact {
@@ -103,7 +109,8 @@
   font-family: $main-font;
   color: $black;
   transition: 0.5s;
-  margin-left: 35px;
+  margin-left: 28px;
+  letter-spacing: 0.18px;
 
   &:hover {
     opacity: 0.6;
