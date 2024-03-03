@@ -1,3 +1,19 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #f6f6f6;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: $wide-font;
+  background-color: $white;
 }

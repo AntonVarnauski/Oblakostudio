@@ -2,6 +2,10 @@
 @import "./global/variables.scss";
 @import "./global/global.scss";
 @import "./global/fonts.scss";
+@import "./global/visually-hidden.scss";
+@import "./global/mixins.scss";
+@import "./global/list__reset.scss";
 
 /* BLOCKS */
 @import "./blocks/header.scss";
+@import "./blocks/page__body.scss"
