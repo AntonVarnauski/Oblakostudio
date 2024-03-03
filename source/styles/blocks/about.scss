@@ -1,0 +1,41 @@
+.about {
+  @include flex(column, center, center);
+  background-color: $main-color;
+  padding: 150px 280px;
+  &__title {
+    font-size: 60px;
+    text-transform: lowercase;
+    text-align: center;
+  }
+  &__text {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  &__btn {
+    margin-top: 80px;
+    font-family: $wide-font;
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -33px;
+      right: -36px;
+      width: 285px;
+      height: 90px;
+      mask-image: url("../../images/stroke_btn.svg");
+      mask-size: 100% 100%;
+      mask-position: center center;
+      background-color: $white;
+      transition: 0.5s;
+    }
+    &:hover::before {
+      background-color: $orange;
+    }
+  }
+}
