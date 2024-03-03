@@ -117,6 +117,11 @@ export function copyAssets () {
     .pipe(dest(PATH_TO_DIST));
 }
 
+export function copyImages () {
+  return src(`${PATH_TO_SOURCE}images/*.*`)
+    .pipe(dest(`${PATH_TO_DIST}images/`));
+}
+
 export function startServer () {
   server.init({
     server: {
@@ -188,6 +193,7 @@ export function buildProd (done) {
       processScripts,
       createStack,
       copyAssets,
+      copyImages,
     ),
   )(done);
 }
@@ -200,6 +206,7 @@ export function runDev (done) {
       processStyles,
       processScripts,
       createStack,
+      copyImages,
     ),
     startServer,
   )(done);
