@@ -1,1 +1,12 @@
-/* в этот файл добавляет скрипты*/
+const bg = document.querySelectorAll('.cloud');
+for (let i = 0; i < bg.length; i++){
+  window.addEventListener('mousemove', (e) => {
+    const x = e.clientX / window.innerWidth;
+    const y = e.clientY / window.innerHeight;
+    if (i % 2 === 1) {
+      bg[i].style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
+    } else {
+      bg[i].style.transform = 'translate(' + x * 50 + 'px, ' + y * 50 + 'px)';
+    }
+  });
+}
