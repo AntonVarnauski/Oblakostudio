@@ -76,8 +76,11 @@
       background-color: $orange;
       transition: 0.5s;
     }
-    &:hover::before {
-      background-color: $main-color;
+    &:hover{
+      color: $orange;
+      &::before {
+        background-color: $black;
+      }
     }
   }
 }

@@ -1,19 +1,51 @@
 .about {
   @include flex(column, center, center);
   background-color: $main-color;
-  padding: 10% 20%;
+  padding: 10% 0;
   &__title {
-    font-size: 60px;
-    text-transform: lowercase;
-    text-align: center;
+    font-family: $wide-font;
+    font-size: 110px;
+    text-transform: uppercase;
+    color: $white;
+    text-align: left;
+    position: relative;
+    margin: 0 10%;
+    &::after {
+      content: "";
+      position: absolute;
+      top: -15%;
+      right: 2%;
+      background-image: url("../../images/arrow_about.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      width: 490px;
+      height: 150px;
+    }
   }
   &__text {
     font-size: 20px;
-    text-align: center;
-    margin-top: 50px;
+    text-align: left;
+    margin: 40px 10% 75px;
+  }
+  &__line {
+    position: relative;
+    height: 320px;
+    width: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-image: url("../../images/about_line.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
   }
   &__btn {
-    margin-top: 80px;
+    margin-top: 50px;
     font-family: $wide-font;
     background-color: transparent;
     border: 0;
@@ -21,6 +53,7 @@
     text-align: center;
     cursor: pointer;
     position: relative;
+    transition: 0.5s;
     &::before {
       content: "";
       position: absolute;
@@ -34,8 +67,11 @@
       background-color: $white;
       transition: 0.5s;
     }
-    &:hover::before {
-      background-color: $orange;
+    &:hover {
+      color: $white;
+      &::before {
+        background-color: $black;
+      }
     }
   }
 }
