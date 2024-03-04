@@ -1,0 +1,129 @@
+.serials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px 40px;
+  margin-top: 40px;
+  background-color: $black;
+  border-radius: 30px 30px 0 0;
+  padding: 2% 7%;
+  &__header {
+    grid-column: 1/-1;
+    width: 100%;
+    @include flex(row, space-between, center);
+  }
+  &__title {
+    font-size: 60px;
+    text-transform: lowercase;
+    color: $white;
+  }
+  &__filter {
+    @include flex();
+    width: 20%;
+    & .filter  {
+      &__item{
+        padding: 4px 10px;
+        margin-bottom: 10px;
+      }
+      &__link {
+        color: $white;
+        text-decoration: none;
+        font-size: 15px;
+        border: 2px solid $white;
+        border-radius: 20px;
+        padding: 4px 19px;
+        transition: 0.5s;
+        &:hover {
+          border: 2px solid $orange;
+          color: $orange;
+          background-color: transparent;
+        }
+        &--active {
+          border: 2px solid $orange;
+          color: $white;
+          background-color: $orange;
+        }
+      }
+    }
+  }
+  &__wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    padding: 35px;
+    background-color: $main-color;
+    border-radius: 13px;
+    transform: translateY(100%);
+    @include flex(column, space-between, flex-start);
+    transition: 1s;
+  }
+  &__item {
+    position: relative;
+    overflow: hidden;
+  }
+  &__img {
+    border-radius: 13px;
+    transition: 0.5s;
+  }
+  &__link {
+    text-decoration: none;
+    color: $black;
+    transition: 0.5s;
+    &:hover {
+      & .serials__wrapper {
+        transform: translateY(0);
+      }
+      & .serials__img {
+        filter: grayscale(80%);
+      }
+    }
+  }
+  &__category {
+    color: $black;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: $main-font;
+    transition: 0.5s;
+    &:hover {
+      color: $white;
+    }
+  }
+  &__name {
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+  &__text {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-family: $main-font;
+  }
+  &__more {
+    grid-column: 1/-1;
+    text-decoration: none;
+    color: $white;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    font-size: 20px;
+    position: relative;
+    transition: 0.5s;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: -10px;
+      width: 175px;
+      height: 6px;
+      mask-image: url("../../images/decor/stroke_serials.svg");
+      mask-size: 100% 100%;
+      mask-position: center center;
+      background-color: $orange
+    }
+    &:hover{
+      color: $orange;
+    }
+  }
+}

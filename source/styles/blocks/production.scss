@@ -78,37 +78,36 @@
     }
     &:hover{
       color: $orange;
-      &::before {
-        background-color: $black;
-      }
     }
   }
 }
 
-.filter {
-  @include flex();
+.production__filter {
+  @include flex(row, flex-start, center);
   width: 47%;
-  &__item{
-    padding: 4px 10px;
-    margin-bottom: 10px;
-  }
-  &__link {
-    color: $black;
-    text-decoration: none;
-    font-size: 15px;
-    border: 2px solid $gray;
-    border-radius: 20px;
-    padding: 4px 19px;
-    transition: 0.5s;
-    &:hover {
-      border: 2px solid $orange;
-      color: $orange;
-      background-color: transparent;
+  & .filter  {
+    &__item{
+      padding: 4px 10px;
+      margin-bottom: 10px;
     }
-    &--active {
-      border: 2px solid $orange;
-      color: $white;
-      background-color: $orange;
+    &__link {
+      color: $black;
+      text-decoration: none;
+      font-size: 15px;
+      border: 2px solid $gray;
+      border-radius: 20px;
+      padding: 4px 19px;
+      transition: 0.5s;
+      &:hover {
+        border: 2px solid $orange;
+        color: $orange;
+        background-color: transparent;
+      }
+      &--active {
+        border: 2px solid $orange;
+        color: $white;
+        background-color: $orange;
+      }
     }
   }
 }
