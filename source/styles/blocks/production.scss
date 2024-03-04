@@ -76,10 +76,8 @@
       background-color: $orange;
       transition: 0.5s;
     }
-    &:hover {
-      &::before {
-        background-color: $main-color;
-      }
+    &:hover::before {
+      background-color: $main-color;
     }
   }
 }
@@ -100,8 +98,14 @@
     padding: 4px 19px;
     transition: 0.5s;
     &:hover {
-      border: 2px solid $black;
-      color: $gray;
+      border: 2px solid $orange;
+      color: $orange;
+      background-color: transparent;
+    }
+    &--active {
+      border: 2px solid $orange;
+      color: $white;
+      background-color: $orange;
     }
   }
 }
