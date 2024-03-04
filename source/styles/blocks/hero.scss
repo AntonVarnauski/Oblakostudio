@@ -1,6 +1,6 @@
 .hero {
   @include flex(row, space-around, center);
-  background-image: url("../../images/divider.svg"), url("../../images/main_bg@2x.webp");
+  background-image: url("../../images/decor/divider.svg"), url("../../images/main_bg@2x.webp");
   background-size: 100% auto, 100% 100%;
   background-repeat: no-repeat, repeat;
   background-position: bottom -2px center, center center;
@@ -10,7 +10,7 @@
 }
 
 .cloud_1 {
-  background-image: url("../../images/cloud1.svg");
+  background-image: url("../../images/decor/cloud1.svg");
   width: 269px;
   height: 150px;
   position: absolute;
@@ -19,7 +19,7 @@
 }
 
 .cloud_2 {
-  background-image: url("../../images/cloud2.svg");
+  background-image: url("../../images/decor/cloud2.svg");
   width: 156px;
   height: 150px;
   position: absolute;
@@ -28,7 +28,7 @@
 }
 
 .cloud_3 {
-  background-image: url("../../images/cloud3.svg");
+  background-image: url("../../images/decor/cloud3.svg");
   width: 205px;
   height: 150px;
   position: absolute;
@@ -40,7 +40,7 @@
     position: absolute;
     top: -30%;
     right: -10%;
-    background-image: url("../../images/camera.svg");
+    background-image: url("../../images/decor/camera.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 200%;
@@ -54,7 +54,7 @@
 }
 
 .cloud_4 {
-  background-image: url("../../images/cloud4.svg");
+  background-image: url("../../images/decor/cloud4.svg");
   width: 298px;
   height: 150px;
   position: absolute;
