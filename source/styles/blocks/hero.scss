@@ -2,7 +2,7 @@
   @include flex(row, space-around, center);
   background-image: url("../../images/divider.svg"), url("../../images/main_bg@2x.webp");
   background-size: 100% auto, 100% 100%;
-  background-repeat: no-repeat, no-repeat;
+  background-repeat: no-repeat, repeat;
   background-position: bottom -2px center, center center;
   width: 100%;
   padding: 25% 7%;
@@ -34,6 +34,23 @@
   position: absolute;
   top: 15%;
   left: 5%;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: -30%;
+    right: -10%;
+    background-image: url("../../images/camera.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 200%;
+    height: 200%;
+    opacity: 0.1;
+    transition: 1s;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
 }
 
 .cloud_4 {
