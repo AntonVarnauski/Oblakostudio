@@ -14,7 +14,13 @@ html {
 body {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   min-height: 100vh;
   font-family: $wide-font;
   background-color: $white;
+}
+
+textarea {
+  resize: none;
+  overflow: auto;
 }
