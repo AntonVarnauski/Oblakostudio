@@ -4,6 +4,8 @@
   position: fixed;
   top: 0;
   z-index: 9999;
+  width: 100%;
+  max-width: 1400px;
 }
 
 .nav {
@@ -12,7 +14,7 @@
   &__list {
     @include flex();
     width: 615px;
-    margin-right: 200px;
+    margin-right: auto;
   }
 
   &__link {
