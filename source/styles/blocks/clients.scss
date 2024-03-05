@@ -6,9 +6,8 @@
     text-transform: lowercase;
   }
   &__list {
-    @include flex(row, flex-start, center);
-    flex-wrap: nowrap;
-    gap: 20px;
+   display: flex;
+   align-items: center;
   }
 }
 

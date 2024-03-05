@@ -173,6 +173,8 @@ window.addEventListener('DOMContentLoaded', () => {
         arrows: false,
         pagination: false,
         direction: 'rtl',
+        autoWidth: true,
+        gap: 30,
         autoScroll: {
           speed: 2,
         },
@@ -184,6 +186,8 @@ window.addEventListener('DOMContentLoaded', () => {
         perMove: 1,
         arrows: false,
         pagination: false,
+        autoWidth: true,
+        gap: 30,
         autoScroll: {
           speed: 2,
         },
