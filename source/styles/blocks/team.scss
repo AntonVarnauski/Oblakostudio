@@ -54,13 +54,17 @@
     display: block;
   }
   &__categories {
+    @include flex (row, flex-start, center);
     margin-bottom: 50px;
+    min-width: 400px;
   }
   &__work {
+    font-size: 12px;
     color: $orange;
     border: 1px solid $orange;
     border-radius: 20px;
     padding: 5px 10px;
+    margin-right: 10px;
   }
   &__name--second {
     margin-bottom: 40px;
