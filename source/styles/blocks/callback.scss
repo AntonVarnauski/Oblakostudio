@@ -1,0 +1,39 @@
+.callback {
+  padding: 10% 7%;
+  &__link {
+    font-size: 60px;
+    text-decoration: none;
+    color: $black;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      left: -60px;
+      width: 670px;
+      height: 183px;
+      background-image: url("../../images/decor/stroke_callback.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      transition: 0.5s;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 16%;
+      right: -20%;
+      height: 42px;
+      width: 160px;
+      background-image: url("../../images/decor/callback_arrow.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      transition: 0.5s;
+    }
+    &:hover::after {
+      right: -23%;
+    }
+    &:hover::before {
+      transform: scale(1.05);
+    }
+  }
+}
