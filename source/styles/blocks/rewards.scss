@@ -1,9 +1,9 @@
 .rewards {
   @include flex(column, space-between, flex-start);
   position: relative;
-  padding: 2% 7%;
+  padding: 5% 7%;
   overflow: hidden;
-  min-height: 700px;
+  min-height: 760px;
   &__title {
     font-size: 60px;
     margin-bottom: 30px;

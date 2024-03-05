@@ -9,6 +9,31 @@
    display: flex;
    align-items: center;
   }
+  &__more {
+    text-decoration: none;
+    color: $black;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 20px;
+    position: relative;
+    transition: 0.5s;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: -10px;
+      width: 200px;
+      height: 6px;
+      mask-image: url("../../images/decor/stroke_serials.svg");
+      mask-size: 100% 100%;
+      mask-position: center center;
+      background-color: $orange
+    }
+    &:hover{
+      color: $orange;
+    }
+  }
 }
 
 .splide {

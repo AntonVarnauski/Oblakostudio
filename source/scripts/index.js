@@ -164,11 +164,11 @@ window.onload = () => {
 window.addEventListener('DOMContentLoaded', () => {
   const elms = document.getElementsByClassName('splide');
 
-  for ( var i = 0; i < elms.length; i++ ) {
+  for ( let i = 0; i < elms.length; i++ ) {
     if (i%2 === 1) {
       new Splide(elms[i], {
         type   : 'loop',
-        perPage: 11,
+        perPage: 10,
         perMove: 1,
         arrows: false,
         pagination: false,
@@ -176,22 +176,36 @@ window.addEventListener('DOMContentLoaded', () => {
         autoWidth: true,
         gap: 50,
         autoScroll: {
-          speed: 2,
+          speed: 1,
         },
       }).mount(window.splide.Extensions);
     } else {
       new Splide(elms[i], {
         type   : 'loop',
-        perPage: 11,
+        perPage: 10,
         perMove: 1,
         arrows: false,
         pagination: false,
         autoWidth: true,
         gap: 50,
         autoScroll: {
-          speed: 2,
+          speed: 1,
         },
       }).mount(window.splide.Extensions);
     }
   }
 });
+
+window.addEventListener('DOMContentLoaded', () => {
+  const elms = document.getElementsByClassName('team__item');
+
+  for(let i = 0; i < elms.length; i++) {
+    elms[i].addEventListener('mouseover', () => {
+      elms[i].classList.add('team__item--active');
+    })
+    elms[i].addEventListener('mouseleave', () => {
+      elms[i].classList.remove('team__item--active');
+    })
+  }
+
+})
