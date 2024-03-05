@@ -1,0 +1,89 @@
+.rewards {
+  @include flex(column, space-between, flex-start);
+  position: relative;
+  padding: 2% 7%;
+  overflow: hidden;
+  &__title {
+    font-size: 60px;
+    margin-bottom: 30px;
+    text-transform: lowercase;
+  }
+  &__list {
+    align-self: center;
+    position: relative;
+  }
+  &__item {
+    @include flex(row, space-between, center);
+    flex-wrap: nowrap;
+    border: 1px solid $gray;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-top: 5px;
+    &--win {
+      background-color: $orange;
+      & .rewards__name, & .rewards__year, & .rewards__place {
+        color: $white;
+      }
+    }
+    &--short {
+      background-color: $main-color;
+      & .rewards__year, & .rewards__place {
+        color: $white;
+      }
+    }
+  }
+  &__year {
+    font-size: 14px;
+    color: $gray;
+    margin-right: 20px;
+  }
+  &__name {
+    font-size: 20px;
+    color: $black;
+    white-space: nowrap;
+    margin-right: 10px;
+  }
+  &__icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  &__place {
+    font-size: 14px;
+    color: $gray;
+    white-space: nowrap;
+  }
+}
+
+.matter {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 0 auto;
+  height: 500px;
+}
+
+canvas {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: 0;
+  width: 80%;
+  height: 100%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  opacity: 0;
+}
+
+[data-object] {
+  --move-x: 0px;
+  --move-y: 0px;
+  --rotate: 0rad;
+  position: absolute;
+  z-index: 2;
+  transform: translate(-50%, -50%) rotate(var(--rotate));
+  top: var(--move-y);
+  left: var(--move-x);
+  pointer-events: none;
+}
