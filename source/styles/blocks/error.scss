@@ -1,0 +1,83 @@
+.error__body {
+  background-color: $main-color;
+  min-height: 100vh;
+  min-width: 100vw;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -3%;
+    width: 30%;
+    height: 100%;
+    background-image: url("../../images/decor/left_lent.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: left center;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: -2%;
+    width: 30%;
+    height: 100%;
+    background-image: url("../../images/decor/right_lent.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: right center;
+  }
+}
+
+.error__img {
+  display: block;
+  margin: auto;
+}
+
+.error__link {
+  margin-bottom: 80px;
+  font-size: 60px;
+  text-decoration: none;
+  align-self: center;
+  color: $black;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 17px;
+    left: -195px;
+    height: 42px;
+    width: 160px;
+    background-image: url("../../images/decor/error_arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: -53%;
+    right: -3%;
+    width: 459px;
+    height: 153px;
+    background-image: url("../../images/decor/error_stroke.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  &:hover::before {
+    animation: moveErr 1s infinite;
+  }
+  &:hover::after {
+    animation: shake 1s infinite;
+  }
+}
+
+@keyframes moveErr {
+  0% {
+    left: -195px;
+  }
+  50% {
+    left: -210px;
+  }
+  100% {
+    left: -195px;
+  }
+}
