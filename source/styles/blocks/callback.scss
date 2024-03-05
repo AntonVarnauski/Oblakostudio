@@ -15,7 +15,6 @@
       background-image: url("../../images/decor/stroke_callback.svg");
       background-repeat: no-repeat;
       background-size: 100% 100%;
-      transition: 0.5s;
     }
     &::after {
       content: '';
@@ -27,13 +26,36 @@
       background-image: url("../../images/decor/callback_arrow.svg");
       background-repeat: no-repeat;
       background-size: 100% 100%;
-      transition: 0.5s;
     }
     &:hover::after {
-      right: -23%;
+      animation: moveX 1s infinite;
     }
     &:hover::before {
-      transform: scale(1.05);
+      animation: shake 1s infinite;
     }
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+
+@keyframes moveX {
+  0% {
+    right: -20%;
+  }
+  50% {
+    right: -25%;
+  }
+  100% {
+    right: -20%;
   }
 }
