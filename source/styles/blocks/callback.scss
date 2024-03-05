@@ -20,7 +20,7 @@
       content: '';
       position: absolute;
       top: 16%;
-      right: -20%;
+      right: -17%;
       height: 42px;
       width: 160px;
       background-image: url("../../images/decor/callback_arrow.svg");
@@ -50,12 +50,12 @@
 
 @keyframes moveX {
   0% {
-    right: -20%;
+    right: -17%;
   }
   50% {
-    right: -25%;
+    right: -22%;
   }
   100% {
-    right: -20%;
+    right: -17%;
   }
 }

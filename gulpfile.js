@@ -118,7 +118,7 @@ export function copyAssets () {
 }
 
 export function copyImages () {
-  return src(`${PATH_TO_SOURCE}images/*.*`)
+  return src(`${PATH_TO_SOURCE}images/*.*`,`${PATH_TO_SOURCE}images/**/*.*`)
     .pipe(dest(`${PATH_TO_DIST}images/`));
 }
 
