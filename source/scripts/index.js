@@ -160,4 +160,34 @@ window.onload = () => {
   }, { threshold: 0.1 })
   observer.observe(document.querySelector('.rewards__list'))
 }
-/* eslint-enable */
+
+window.addEventListener('DOMContentLoaded', () => {
+  const elms = document.getElementsByClassName('splide');
+
+  for ( var i = 0; i < elms.length; i++ ) {
+    if (i%2 === 1) {
+      new Splide(elms[i], {
+        type   : 'loop',
+        perPage: 11,
+        perMove: 1,
+        arrows: false,
+        pagination: false,
+        direction: 'rtl',
+        autoScroll: {
+          speed: 2,
+        },
+      }).mount(window.splide.Extensions);
+    } else {
+      new Splide(elms[i], {
+        type   : 'loop',
+        perPage: 11,
+        perMove: 1,
+        arrows: false,
+        pagination: false,
+        autoScroll: {
+          speed: 2,
+        },
+      }).mount(window.splide.Extensions);
+    }
+  }
+});

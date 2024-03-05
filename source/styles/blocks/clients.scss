@@ -6,7 +6,12 @@
     text-transform: lowercase;
   }
   &__list {
-    @include flex(row, space-between, center);
-    margin-bottom: 80px;
+    @include flex(row, flex-start, center);
+    flex-wrap: nowrap;
+    gap: 20px;
   }
+}
+
+.splide {
+  margin-bottom: 50px;
 }
