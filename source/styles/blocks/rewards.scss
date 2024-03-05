@@ -55,6 +55,30 @@
     color: $gray;
     white-space: nowrap;
   }
+  &__more {
+    display: block;
+    margin: 0 auto;
+    font-size: 20px;
+    color: $black;
+    text-decoration: none;
+    position: relative;
+    transition: 0.5s;
+    &:hover {
+      color: $orange;
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -25px;
+      left: -60px;
+      width: 380px;
+      height: 80px;
+      background-image: url("../../images/decor/rewards_stroke.svg");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 .matter {

@@ -59,7 +59,7 @@ function initMatter (matterHolder) {
   addObjects()
   addMouse()
 
-  const gravity = 0.2
+  const gravity = 0.3
   engine.world.gravity.y = gravity
   Matter.Runner.run(engine)
   Render.run(render)
@@ -160,3 +160,4 @@ window.onload = () => {
   }, { threshold: 0.1 })
   observer.observe(document.querySelector('.rewards__list'))
 }
+/* eslint-enable */

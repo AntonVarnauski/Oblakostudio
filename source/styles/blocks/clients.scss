@@ -1,0 +1,12 @@
+.clients {
+  padding: 5% 7%;
+  &__title {
+    font-size: 60px;
+    margin-bottom: 30px;
+    text-transform: lowercase;
+  }
+  &__list {
+    @include flex(row, space-between, center);
+    margin-bottom: 80px;
+  }
+}
