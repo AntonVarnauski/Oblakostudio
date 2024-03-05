@@ -3,6 +3,7 @@
   position: relative;
   padding: 2% 7%;
   overflow: hidden;
+  min-height: 700px;
   &__title {
     font-size: 60px;
     margin-bottom: 30px;
@@ -57,11 +58,12 @@
 }
 
 .matter {
-  position: relative;
+  position: absolute;
   z-index: 1;
   width: 100%;
   margin: 0 auto;
-  height: 500px;
+  height: 2500px;
+  top: -1900px
 }
 
 canvas {

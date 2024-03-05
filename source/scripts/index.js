@@ -59,7 +59,7 @@ function initMatter (matterHolder) {
   addObjects()
   addMouse()
 
-  const gravity = 0.1
+  const gravity = 0.2
   engine.world.gravity.y = gravity
   Matter.Runner.run(engine)
   Render.run(render)
