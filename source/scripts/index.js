@@ -174,7 +174,7 @@ window.addEventListener('DOMContentLoaded', () => {
         pagination: false,
         direction: 'rtl',
         autoWidth: true,
-        gap: 30,
+        gap: 50,
         autoScroll: {
           speed: 2,
         },
@@ -187,7 +187,7 @@ window.addEventListener('DOMContentLoaded', () => {
         arrows: false,
         pagination: false,
         autoWidth: true,
-        gap: 30,
+        gap: 50,
         autoScroll: {
           speed: 2,
         },
