@@ -8,17 +8,26 @@
     top: 0;
     z-index: 9999;
   }
+  @media (max-width: $tablet-width) {
+    background-color: rgba(255, 255, 255, 0.2);
+    min-height: 50px;
+    padding: 5px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+  }
 }
 
 .nav {
   @include flex(row, flex-start, center);
-
   &__list {
     @include flex();
     width: 615px;
     margin-right: auto;
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
   }
-
   &__link {
     text-decoration: none;
     color: $black;
@@ -58,8 +67,41 @@
       }
     }
   }
+  &__burger {
+    display: block;
+    margin-left: auto;
+    background: transparent;
+    border: 0;
+    &-line {
+      display: block;
+      width: 21px;
+      height: 2px;
+      background-color: black;
+      position: relative;
+      &::before {
+        content: "";
+        display: block;
+        width: 21px;
+        height: 2px;
+        background-color: black;
+        position: absolute;
+        top: -6px;
+      }
+      &::after {
+        content: "";
+        display: block;
+        width: 21px;
+        height: 2px;
+        background-color: black;
+        position: absolute;
+        top: 6px;
+      }
+    }
+    @media (min-width: $tablet-width + 1px) {
+      display: block;
+    }
+  }
 }
-
 .logo {
   margin-right: 55px;
   transition: 0.5s;
@@ -68,11 +110,17 @@
     opacity: 0.6;
     transition: 0.5s;
   }
+  @media (max-width: $tablet-width) {
+    width: 70px;
+    height: auto;
+  }
 }
-
 .contact {
   &__list {
     @include flex();
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
   }
 
   &__link {
@@ -115,8 +163,10 @@
   transition: 0.5s;
   margin-left: 28px;
   letter-spacing: 0.18px;
-
   &:hover {
     opacity: 0.6;
+  }
+  @media (max-width: $tablet-width) {
+    display: none;
   }
 }

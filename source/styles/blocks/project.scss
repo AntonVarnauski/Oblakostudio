@@ -33,11 +33,19 @@
       &::before {
         left: -31%;
       }
+      &:hover::before {
+        left: -35%;
+      }
     }
     &--next {
       &::before {
         rotate: 180deg;
-        right: -31%;
+        right: -32%;
+        left: auto;
+      }
+      &:hover::before {
+        left:auto;
+        right: -35%;
       }
     }
   }
