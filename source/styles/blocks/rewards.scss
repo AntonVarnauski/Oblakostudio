@@ -20,14 +20,23 @@
     padding: 5px 15px;
     border-radius: 20px;
     margin-top: 5px;
+    & .rewards__icon {
+      background-image: url("../../images/decor/star@2x.webp");
+    }
     &--win {
       background-color: $orange;
+      & .rewards__icon {
+        background-image: url("../../images/decor/cup@2x.webp");
+      }
       & .rewards__name, & .rewards__year, & .rewards__place {
         color: $white;
       }
     }
     &--short {
       background-color: $main-color;
+      & .rewards__icon {
+        background-image: url("../../images/decor/thumbs@2x.webp");
+      }
       & .rewards__year, & .rewards__place {
         color: $white;
       }
@@ -49,6 +58,9 @@
     width: 20px;
     height: 20px;
     margin-right: 10px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
   }
   &__place {
     font-size: 14px;
