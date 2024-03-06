@@ -3,6 +3,9 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 35px 40px;
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 1fr;
+  }
   &--project {
     background-color: $white;
   }
@@ -10,6 +13,10 @@
     @include flex(row, space-between, center);
     width: 100%;
     grid-column: 1/-1;
+    @media (max-width: $tablet-width) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
     & .project__back:first-of-type {
       margin-left: 50px;
     }
@@ -20,6 +27,9 @@
   &__title {
     font-size: 60px;
     text-transform: lowercase;
+    @media (max-width: $tablet-width) {
+      font-size: 30px;
+    }
   }
   &__item {
     @include flex (column, space-between, center);
@@ -27,10 +37,13 @@
   &__anim {
     display: none;
     border-radius: 10px;
+    width: 100%;
+    height: auto;
   }
   &__img {
     display: block;
     width: 100%;
+    height: auto;
   }
   &__link__img:hover {
     .production__anim {
@@ -53,6 +66,9 @@
   }
   &__text {
     margin-top: 5px;
+    @media (max-width: $tablet-width) {
+      font-size: 12px;
+    }
   }
   &__category {
     margin-top: 10px;
@@ -60,6 +76,9 @@
     transition: 0.5s;
     &:hover {
       color: $black;
+    }
+    @media (max-width: $tablet-width) {
+      font-size: 12px;
     }
   }
   &__more {
@@ -94,10 +113,16 @@
 .production__filter {
   @include flex(row, flex-start, center);
   width: 47%;
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
   & .filter  {
     &__item{
       padding: 4px 10px;
       margin-bottom: 10px;
+      @media (max-width: $tablet-width) {
+        margin-bottom: 0;
+      }
     }
     &__link {
       color: $black;
@@ -116,6 +141,10 @@
         border: 2px solid $orange;
         color: $white;
         background-color: $orange;
+      }
+      @media (max-width: $tablet-width) {
+        font-size: 12px;
+        padding: 2px 10px;
       }
     }
   }
