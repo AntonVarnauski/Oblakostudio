@@ -3,10 +3,19 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 35px 40px;
+  &--project {
+    background-color: $white;
+  }
   &__header {
     @include flex(row, space-between, center);
     width: 100%;
     grid-column: 1/-1;
+    & .project__back:first-of-type {
+      margin-left: 50px;
+    }
+    & .project__back--next {
+      margin-right: 50px;
+    }
   }
   &__title {
     font-size: 60px;

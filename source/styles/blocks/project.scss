@@ -1,0 +1,148 @@
+.project {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  gap: 50px 20px;
+  padding: 3% 7%;
+  &__back {
+    grid-column: 1/-1;
+    text-decoration: none;
+    color: $black;
+    font-size: 20px;
+    position: relative;
+    transition: 0.5s;
+    &:hover {
+      color: $gray;
+      &::before {
+        left: -7%;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: -6%;
+      width: 63px;
+      height: 16px;
+      background-image: url("../../images/decor/project_back.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      transition: 0.5s;
+    }
+    &--production {
+      &::before {
+        left: -31%;
+      }
+    }
+    &--next {
+      &::before {
+        rotate: 180deg;
+        right: -31%;
+      }
+    }
+  }
+  &__title {
+    font-size: 60px;
+    text-transform: lowercase;
+    grid-column: 1/-2;
+  }
+  &__category {
+    grid-column: -2/-1;
+    justify-self: end;
+    &-item {
+      border: 1px solid $gray;
+      border-radius: 20px;
+      padding: 5px 15px;
+      font-size: 15px;
+    }
+  }
+  &__desc {
+    grid-column: 1/-2;
+    font-size: 20px;
+  }
+  &__video {
+    grid-column: 1/-1;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    height: 500px;
+  }
+  &__task {
+    grid-column: span 2;
+    padding-right: 20%;
+  }
+  &__subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      width: 115px;
+      height: 5px;
+      background-image: url("../../images/decor/project_stroke.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+    &--long {
+      &::after {
+        width: 275px;
+        height: 10px;
+        background-image: url("../../images/decor/project_long_stroke.svg");
+      }
+    }
+  }
+  &__text {
+    font-size: 18px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  &__video-about {
+    grid-column: span 2;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    height: 300px;
+    transition: 0.5s;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  &__backstage-title {
+    grid-column: 1/-1;
+    font-size: 60px;
+    text-transform: lowercase;
+    margin-top: 50px;
+  }
+  &__backstage-wrapper {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 20px;
+  }
+  &__backstage-link {
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 0.5s;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  &__team-list {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 20px;
+  }
+  &__team-work {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  &__team-name {
+    font-family: $main-font;
+    font-size: 15px;
+  }
+}
