@@ -7,6 +7,9 @@
   width: 100%;
   padding: 25% 7%;
   position: relative;
+  @media (max-width: $tablet-width) {
+    height: 100vh;
+  }
 }
 
 .cloud_1 {
@@ -16,6 +19,10 @@
   position: absolute;
   top: 31%;
   right: 1%;
+  display: none;
+  @media (min-width: #{$tablet-width + 1px}) {
+    display: block;
+  }
 }
 
 .cloud_2 {
@@ -25,6 +32,10 @@
   position: absolute;
   bottom: 5%;
   left: 8%;
+  display: none;
+  @media (min-width: #{$tablet-width + 1px}) {
+    display: block;
+  }
 }
 
 .cloud_3 {
@@ -34,6 +45,10 @@
   position: absolute;
   top: 15%;
   left: 5%;
+  display: none;
+  @media (min-width: #{$tablet-width + 1px}) {
+    display: block;
+  }
   position: relative;
   &::after {
     content: "";
@@ -60,4 +75,18 @@
   position: absolute;
   top: 35%;
   left: 36%;
+  display: none;
+  @media (min-width: #{$tablet-width + 1px}) {
+    display: block;
+  }
+}
+
+.hero .logo__img {
+  max-width: 100%;
+  height: auto;
+  @media (max-width: $tablet-width) {
+    &:first-of-type{
+      display: none;
+    }
+  }
 }

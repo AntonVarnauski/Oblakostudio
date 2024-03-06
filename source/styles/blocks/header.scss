@@ -9,15 +9,14 @@
     z-index: 9999;
   }
   @media (max-width: $tablet-width) {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: transparent;
     min-height: 50px;
-    padding: 5px 20px;
+    padding: 20px;
     position: fixed;
     top: 0;
     z-index: 9999;
   }
 }
-
 .nav {
   @include flex(row, flex-start, center);
   &__list {
@@ -77,6 +76,7 @@
       width: 21px;
       height: 2px;
       background-color: black;
+      transition: 0.5s;
       position: relative;
       &::before {
         content: "";
@@ -86,6 +86,7 @@
         background-color: black;
         position: absolute;
         top: -6px;
+        transition: 0.7s;
       }
       &::after {
         content: "";
@@ -95,9 +96,30 @@
         background-color: black;
         position: absolute;
         top: 6px;
+        transition: 0.7s;
       }
     }
-    @media (min-width: $tablet-width + 1px) {
+
+    &--open {
+      & .nav__burger-line {
+        background-color: transparent;
+        &::before {
+          top: 0;
+          transform: rotate(45deg);
+        }
+        &::after {
+          top: 0;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+    @media (min-width: #{$tablet-width + 1px}) {
+      display: none;
+    }
+  }
+  &__mobile-list {
+    display: none;
+    @media (max-width: $tablet-width) {
       display: block;
     }
   }
@@ -137,6 +159,68 @@
       margin-right: 30px;
     }
 
+    &:hover {
+      opacity: 0.6;
+      transition: 0.5s;
+    }
+  }
+}
+@keyframes mobTran {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.mobile__nav {
+  @include flex(column, flex-end, center);
+  padding: 80px 20px 40px;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  animation: height 1s;
+  background-color: $main-color;
+  transform: translateY(-100vh);
+  &--open {
+    animation: mobTran 1s forwards;
+  }
+  & .nav__item {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  & .call__link {
+    display: block;
+    font-family: $wide-font;
+    color: $white;
+    margin: 0;
+    margin-top: auto;
+    font-size: 20px;
+    margin-bottom: 20px
+  }
+}
+.mobile-social {
+  @include flex();
+  @media (min-width: #{$tablet-width + 1px}) {
+    display: none;
+  }
+  &__item {
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    display: block;
+    mask-size: contain;
+    background-color: $white;
+    width: 25px;
+    height: 25px;
+    transition: 0.5s;
     &:hover {
       opacity: 0.6;
       transition: 0.5s;

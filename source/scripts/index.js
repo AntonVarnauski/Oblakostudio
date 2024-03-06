@@ -1,3 +1,11 @@
+const menuBtn = document.querySelector('.nav__burger');
+const mobMenu = document.querySelector('.mobile__nav');
+
+menuBtn.addEventListener('click', () => {
+  menuBtn.classList.toggle('nav__burger--open');
+  mobMenu.classList.toggle('mobile__nav--open');
+});
+
 const bg = document.querySelectorAll('.cloud');
 for (let i = 0; i < bg.length; i++){
   window.addEventListener('mousemove', (e) => {
