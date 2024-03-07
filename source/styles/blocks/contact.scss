@@ -4,7 +4,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   gap: 100px;
-  @media (max-width: $tablet-width) {
+  @media (max-width: 990px) {
     grid-template-columns: 1fr;
     gap: 50px;
   }
@@ -12,6 +12,9 @@
     font-size: 60px;
     text-transform: lowercase;
     margin-bottom: 60px;
+    @media (max-width: 930px) {
+      margin-top: 40px;
+    }
     @media (max-width: $tablet-width) {
       font-size: 30px;
       margin-bottom: 30px;
@@ -27,11 +30,17 @@
     width: 100%;
     position: relative;
     margin-bottom: 25px;
+    @media (max-width: 1210px) {
+      font-size: 18px;
+    }
     @media (max-width: $tablet-width) {
       font-size: 16px;
     }
     & > span {
       margin-right: 10%;
+      @media (max-width: 1210px) {
+        margin-right: 7%;
+      }
       @media (max-width: $tablet-width) {
         margin-right: 5%;
       }
@@ -171,7 +180,7 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url("../../images/icons/stack.svg#phone");
-  @media (max-width: $tablet-width) {
+  @media (max-width: 1210px) {
     width: 50px;
     height: 50px;
   }
@@ -184,7 +193,7 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url("../../images/icons/stack.svg#mail");
-  @media (max-width: $tablet-width) {
+  @media (max-width: 1210px) {
     width: 50px;
     height: 50px;
   }
@@ -197,7 +206,7 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url("../../images/icons/stack.svg#clock");
-  @media (max-width: $tablet-width) {
+  @media (max-width: 1210px) {
     width: 50px;
     height: 50px;
   }
@@ -210,7 +219,7 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url("../../images/icons/stack.svg#pin");
-  @media (max-width: $tablet-width) {
+  @media (max-width: 1210px) {
     width: 50px;
     height: 50px;
   }
@@ -223,7 +232,7 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url("../../images/icons/stack.svg#comment");
-  @media (max-width: $tablet-width) {
+  @media (max-width: 1210px) {
     width: 50px;
     height: 50px;
   }

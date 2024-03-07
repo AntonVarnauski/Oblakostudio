@@ -27,6 +27,9 @@
   &__title {
     font-size: 60px;
     text-transform: lowercase;
+    @media (max-width: 800px) {
+      font-size: 50px;
+    }
     @media (max-width: $tablet-width) {
       font-size: 30px;
     }
