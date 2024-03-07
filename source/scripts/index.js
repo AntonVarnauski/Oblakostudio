@@ -124,13 +124,13 @@ window.addEventListener('DOMContentLoaded', () => {
       const runner = Runner.create();
       Runner.run(runner, engine);
       const placement = {x: 30, y: 10};
-      const spacing = {x: 30, y: 10};
+      const spacing = {x: 20, y: 20};
 
       createBoundingBox();
       addObjects()
       addMouse()
 
-      const gravity = 0.3
+      const gravity = 0.1
       engine.world.gravity.y = gravity
       Matter.Runner.run(engine)
       Render.run(render)
