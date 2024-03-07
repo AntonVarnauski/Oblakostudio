@@ -1,11 +1,12 @@
 .hero {
-  @include flex(row, space-around, center);
+  @include flex(row, center, center);
   background-image: url("../../images/decor/divider.svg"), url("../../images/main_bg@2x.webp");
   background-size: 100% auto, 100% 100%;
   background-repeat: no-repeat, repeat;
   background-position: bottom -2px center, center center;
   width: 100%;
   padding: 25% 7%;
+  overflow: hidden;
   position: relative;
   @media (max-width: $tablet-width) {
     height: 100vh;
@@ -50,7 +51,6 @@
   @media (min-width: #{$tablet-width + 1px}) {
     display: block;
   }
-  position: relative;
   &::after {
     content: "";
     position: absolute;
@@ -83,8 +83,13 @@
 }
 
 .hero .logo__img {
-  max-width: 100%;
+  max-width: 20%;
   height: auto;
+  margin-bottom: 30px;
+  &:last-of-type {
+    margin-left: 50px;
+    max-width: 80%;
+  }
   @media (max-width: $tablet-width) {
     &:first-of-type{
       display: none;

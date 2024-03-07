@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', () => {
     if (i % 2 === 1) {
       new Splide(elms[i], {
         type: 'loop',
-        perPage: 10,
+        padding: { left: '50%', right: '50%' },
         perMove: 1,
         arrows: false,
         pagination: false,
@@ -53,7 +53,7 @@ window.addEventListener('DOMContentLoaded', () => {
     } else {
       new Splide(elms[i], {
         type: 'loop',
-        perPage: 10,
+        padding: { left: '50%', right: '50%' },
         perMove: 1,
         arrows: false,
         pagination: false,
@@ -99,7 +99,6 @@ window.addEventListener('DOMContentLoaded', () => {
       const width = matterHolder.clientWidth
       const height = matterHolder.clientHeight * heightAdjust
       const scale = window.devicePixelRatio
-
       const render = Render.create({
         element: matterHolder,
         engine,
@@ -116,8 +115,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
       const runner = Runner.create();
       Runner.run(runner, engine);
-      const placement = {x: 1, y: 1};
-      const spacing = {x: 300, y: 300};
+      const placement = {x: 10, y: 10};
+      const spacing = {x: 20, y: 30};
 
       createBoundingBox();
       addObjects()
@@ -131,8 +130,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
       function createBoundingBox() {
         World.add(engine.world, [
-          Bodies.rectangle(width / 2, height + 250, width, 500, {isStatic: true, label: '_noMap'}),
-          Bodies.rectangle(width / 2, -50, width, 100, {isStatic: true, label: '_noMap'}),
+          Bodies.rectangle(width / 2, height + 250, width, 500, {isStatic: true, fillStyle:'red', label: '_noMap'}),
+          Bodies.rectangle(width / 2, 0, width, 100, {isStatic: true, label: '_noMap'}),
           Bodies.rectangle(-50, height / 2, 100, height, {isStatic: true, label: '_noMap'}),
           Bodies.rectangle(width + 50, height / 2, 100, height, {isStatic: true, label: '_noMap'}),
         ]);

@@ -1,10 +1,16 @@
 .callback {
   padding: 10% 7%;
+  overflow: hidden;
+  @include flex(row, center, center);
   &__link {
     font-size: 60px;
     text-decoration: none;
     color: $black;
+    margin-right: 7%;
     position: relative;
+    @media (max-width: 1290px) {
+      font-size: 50px;
+    }
     &::before {
       content: '';
       position: absolute;
@@ -15,6 +21,10 @@
       background-image: url("../../images/decor/stroke_callback.svg");
       background-repeat: no-repeat;
       background-size: 100% 100%;
+      @media (max-width: 1290px) {
+        width: 565px;
+        left: -55px;
+      }
     }
     &::after {
       content: '';
@@ -26,6 +36,9 @@
       background-image: url("../../images/decor/callback_arrow.svg");
       background-repeat: no-repeat;
       background-size: 100% 100%;
+      @media (max-width: 1290px) {
+        width: 130px;
+      }
     }
     &:hover::after {
       animation: moveX 1s infinite;
