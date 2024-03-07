@@ -17,6 +17,11 @@
     flex-wrap: nowrap;
     max-width: 100%;
     gap: 40px;
+    @media (max-width: $tablet-width) {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
   }
   &__item {
     border-radius: 10px;
@@ -26,10 +31,17 @@
     flex-shrink: 2;
     background-color: #f5f5f5;
     transition: 0.5s;
+    @media (max-width: $tablet-width) {
+      flex-basis: 47%;
+    }
     &--active {
       flex-basis: 40%;
       flex-shrink: 0;
       transform: scale(1.1);
+      @media (max-width: $tablet-width) {
+        flex-basis: 47%;
+        transform: scale(1.05);
+      }
       @media (max-width: 1200px) {
         flex-basis: 45%;
       }
@@ -49,6 +61,9 @@
     display: none;
     width: 100%;
     padding: 30px 55px 30px 30px;
+    @media (max-width: $tablet-width) {
+      padding: 10px;
+    }
   }
   &__name {
     position: absolute;
@@ -67,6 +82,10 @@
     @include flex (row, flex-start, center);
     margin-bottom: 50px;
     min-width: 400px;
+    @media (max-width: $tablet-width) {
+      min-width: 100px;
+      margin-bottom: 20px;
+    }
   }
   &__work {
     font-size: 12px;
@@ -75,17 +94,33 @@
     border-radius: 20px;
     padding: 5px 10px;
     margin-right: 10px;
+    @media (max-width: $tablet-width) {
+      padding: 5px;
+      font-size: 10px;
+      margin-bottom: 5px;
+    }
   }
   &__name--second {
     margin-bottom: 40px;
     min-width: 250px;
+    @media (max-width: $tablet-width) {
+      min-width: 100px;
+      margin-bottom: 20px;
+    }
   }
   &__about {
     min-width: 400px;
     font-size: 15px;
     font-family: $main-font;
+    @media (max-width: $tablet-width) {
+      min-width: 100px;
+      font-size: 12px;
+    }
     &:not(:last-of-type) {
       margin-bottom: 20px;
+      @media (max-width: $tablet-width) {
+        margin-bottom: 10px;
+      }
     }
   }
 }

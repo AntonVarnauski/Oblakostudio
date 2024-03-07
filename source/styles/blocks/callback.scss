@@ -11,6 +11,12 @@
     @media (max-width: 1290px) {
       font-size: 50px;
     }
+    @media (max-width: $tablet-width) {
+      font-size: 30px;
+      line-height: 2;
+      text-align: center;
+      margin-right: 0;
+    }
     &::before {
       content: '';
       position: absolute;
@@ -25,6 +31,13 @@
         width: 565px;
         left: -55px;
       }
+      @media (max-width: $tablet-width) {
+        height: 100px;
+        width: 340px;
+        left: -15px;
+        top: -25px;
+      }
+
     }
     &::after {
       content: '';
@@ -38,6 +51,14 @@
       background-size: 100% 100%;
       @media (max-width: 1290px) {
         width: 130px;
+      }
+      @media (max-width: $tablet-width) {
+        height: 22px;
+        width: 80px;
+        left: -20px;
+        top: auto;
+        bottom: 0;
+        transform: rotate(-65deg);
       }
     }
     &:hover::after {
