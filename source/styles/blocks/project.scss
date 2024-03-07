@@ -4,6 +4,11 @@
   grid-template-rows: 1fr;
   gap: 50px 20px;
   padding: 3% 7%;
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 50px;
+  }
   &__back {
     grid-column: 1/-1;
     text-decoration: none;
@@ -11,10 +16,17 @@
     font-size: 20px;
     position: relative;
     transition: 0.5s;
+    @media (max-width: $tablet-width) {
+      font-size: 14px;
+      margin-left: 30px;
+    }
     &:hover {
       color: $gray;
       &::before {
         left: -7%;
+        @media (max-width: $tablet-width) {
+          left: -18%;
+        }
       }
     }
     &::before {
@@ -28,8 +40,17 @@
       background-repeat: no-repeat;
       background-size: 100% 100%;
       transition: 0.5s;
+      @media (max-width: $tablet-width) {
+        width: 40px;
+        height: 15px;
+        top: 1px;
+        left: -17%;
+      }
     }
     &--production {
+      @media (max-width: $tablet-width) {
+        display: none;
+      }
       &::before {
         left: -31%;
       }
@@ -53,6 +74,10 @@
     font-size: 60px;
     text-transform: lowercase;
     grid-column: 1/-2;
+    @media (max-width: $tablet-width) {
+      font-size: 30px;
+      grid-column: 1/-1;
+    }
   }
   &__category {
     grid-column: -2/-1;
@@ -62,11 +87,22 @@
       border-radius: 20px;
       padding: 5px 15px;
       font-size: 15px;
+      @media (max-width: $tablet-width) {
+        font-size: 12px;
+      }
+    }
+    @media (max-width: $tablet-width) {
+      justify-self: start;
+      grid-column: 1/-1;
     }
   }
   &__desc {
     grid-column: 1/-2;
     font-size: 20px;
+    @media (max-width: $tablet-width) {
+      grid-column: 1/-1;
+      font-size: 16px;
+    }
   }
   &__video {
     grid-column: 1/-1;
@@ -77,6 +113,11 @@
   &__task {
     grid-column: span 2;
     padding-right: 20%;
+    @media (max-width: $tablet-width) {
+      grid-column: 1/-1;
+      margin-bottom: 60px;
+      padding-right: 0;
+    }
   }
   &__subtitle {
     font-size: 20px;
@@ -100,9 +141,16 @@
         background-image: url("../../images/decor/project_long_stroke.svg");
       }
     }
+    @media (max-width: $tablet-width) {
+      grid-column: 1/-1;
+    }
   }
   &__text {
     font-size: 18px;
+    @media (max-width: $tablet-width) {
+      font-family: $main-font;
+      font-size: 16px;
+    }
     &:not(:last-child) {
       margin-bottom: 30px;
     }
@@ -116,12 +164,19 @@
     &:hover {
       transform: scale(1.05);
     }
+    @media (max-width: $tablet-width) {
+      grid-column: 1/-1;
+    }
   }
   &__backstage-title {
     grid-column: 1/-1;
     font-size: 60px;
     text-transform: lowercase;
     margin-top: 50px;
+    @media (max-width: $tablet-width) {
+      font-size: 30px;
+      margin-top: 30px;
+    }
   }
   &__backstage-wrapper {
     grid-column: 1/-1;
@@ -129,6 +184,9 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
     gap: 20px;
+    @media (max-width: $tablet-width) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   &__backstage-link {
     border-radius: 10px;
@@ -138,19 +196,32 @@
       transform: scale(1.05);
     }
   }
+  &__backstage-img {
+    width: 100%;
+    height: auto;
+  }
   &__team-list {
     grid-column: 1/-1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     gap: 20px;
+    @media (max-width: $tablet-width) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   &__team-work {
     font-size: 20px;
     margin-bottom: 10px;
+    @media (max-width: $tablet-width) {
+      font-size: 16px;
+    }
   }
   &__team-name {
     font-family: $main-font;
     font-size: 15px;
+    @media (max-width: $tablet-width) {
+      font-size: 12px;
+    }
   }
 }

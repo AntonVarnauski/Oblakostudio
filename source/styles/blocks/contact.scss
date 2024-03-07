@@ -4,10 +4,19 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   gap: 100px;
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
   &__title {
     font-size: 60px;
     text-transform: lowercase;
     margin-bottom: 60px;
+    @media (max-width: $tablet-width) {
+      font-size: 30px;
+      margin-bottom: 30px;
+      margin-top: 50px;
+    }
   }
   &__list {
     @include flex(column, space-between, flex-start);
@@ -18,8 +27,14 @@
     width: 100%;
     position: relative;
     margin-bottom: 25px;
+    @media (max-width: $tablet-width) {
+      font-size: 16px;
+    }
     & > span {
       margin-right: 10%;
+      @media (max-width: $tablet-width) {
+        margin-right: 5%;
+      }
     }
   }
   &__link {
@@ -43,6 +58,12 @@
     &:hover {
       background-color: $black;
     }
+    @media (max-width: $tablet-width) {
+      width: 20px;
+      height: 20px;
+      margin-right: 0;
+      margin-left: 40px;
+    }
   }
   &__social-item {
     position: relative;
@@ -56,6 +77,13 @@
       background-image: url("../../images/decor/contacts_stroke.svg");
       background-repeat: no-repeat;
       background-size: 100% 100%;
+      @media (max-width: $tablet-width) {
+        width: 40px;
+        height: 40px;
+        right: -10px;
+        top: -10px;
+        left: auto;
+      }
     }
     &:nth-child(1):after {
       transform: rotate(random(360) + deg);
@@ -75,8 +103,14 @@
     border-radius: 10px;
     width: 100%;
     padding: 30px 55px;
+    @media (max-width: $tablet-width) {
+      padding: 20px;
+    }
     &-title {
       font-size: 18px;
+      @media (max-width: $tablet-width) {
+        font-size: 14px;
+      }
     }
     & input:not([type="checkbox"]), & textarea {
       font-family: $main-font;
@@ -137,6 +171,10 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url("../../images/icons/stack.svg#phone");
+  @media (max-width: $tablet-width) {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .mail {
@@ -146,6 +184,10 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url("../../images/icons/stack.svg#mail");
+  @media (max-width: $tablet-width) {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .clock {
@@ -155,6 +197,10 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url("../../images/icons/stack.svg#clock");
+  @media (max-width: $tablet-width) {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .pin {
@@ -164,6 +210,10 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url("../../images/icons/stack.svg#pin");
+  @media (max-width: $tablet-width) {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .comment {
@@ -173,15 +223,20 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url("../../images/icons/stack.svg#comment");
+  @media (max-width: $tablet-width) {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .form__personal {
   @include flex(row, flex-start, center);
   flex-wrap: nowrap;
   margin-top: 30px;
-  font-size: 13px;
+  font-size: 12px;
   font-family: $main-font;
   color: $white;
+  margin-left: 7%;
   position: relative;
   & > input {
     margin-right: 20px;
@@ -190,7 +245,7 @@
     content: "";
     display: block;
     position: absolute;
-    left: -6%;
+    left: -8%;
     top: -3px;
     width: 20px;
     height: 20px;
@@ -241,5 +296,10 @@
     background-image: url("../../images/decor/submit_stroke.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    @media (max-width: $tablet-width) {
+      width: 220px;
+      left: -35px;
+    }
   }
+
 }
