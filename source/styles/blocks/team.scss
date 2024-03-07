@@ -81,6 +81,7 @@
     width: 100%;
     min-height: 400px;
     object-fit: cover;
+    object-position: top center;
   }
   &__categories {
     @include flex (row, flex-start, center);
@@ -100,7 +101,7 @@
     margin-right: 10px;
     @media (max-width: $tablet-width) {
       padding: 5px;
-      font-size: 10px;
+      font-size: 12px;
       margin-bottom: 5px;
     }
   }
@@ -118,7 +119,7 @@
     font-family: $main-font;
     @media (max-width: $tablet-width) {
       min-width: 100px;
-      font-size: 12px;
+      font-size: 14px;
     }
     &:not(:last-of-type) {
       margin-bottom: 20px;
