@@ -42,6 +42,10 @@
   align-self: center;
   color: $black;
   position: relative;
+  @media (max-width: 1240px) {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
   @media (max-width: $tablet-width) {
    font-size: 16px;
    margin-bottom: 50px;
@@ -56,6 +60,12 @@
     background-image: url("../../images/decor/error_arrow.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    @media (max-width: 1240px) {
+      top: 5px;
+      left: -50px;
+      height: 12px;
+      width: 40px;
+    }
     @media (max-width: $tablet-width) {
       top: 5px;
       left: -50px;
@@ -73,6 +83,10 @@
     background-image: url("../../images/decor/error_stroke.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    @media (max-width: 1240px) {
+      width: 155px;
+      height: 50px;
+    }
     @media (max-width: $tablet-width) {
       width: 125px;
       height: 40px;
@@ -80,6 +94,9 @@
   }
   &:hover::before {
     animation: moveErr 1s infinite;
+    @media (max-width: 1240px) {
+      animation: moveErr_mob 1s infinite;
+    }
     @media (max-width: $tablet-width) {
       animation: 0;
     }
@@ -98,5 +115,17 @@
   }
   100% {
     left: -195px;
+  }
+}
+
+@keyframes moveErr_mob {
+  0% {
+    left: -50px;
+  }
+  50% {
+    left: -70px;
+  }
+  100% {
+    left: -50px;
   }
 }

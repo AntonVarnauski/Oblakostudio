@@ -5,9 +5,6 @@
   gap: 50px 20px;
   padding: 3% 7%;
   @media (max-width: 930px) {
-    gap: 30px;
-  }
-  @media (max-width: $tablet-width) {
     grid-template-columns: 1fr;
     gap: 30px;
     margin-top: 50px;
@@ -26,6 +23,7 @@
     @media (max-width: $tablet-width) {
       font-size: 14px;
       margin-left: 30px;
+      margin-top: 0;
     }
     @media (max-width: 500px) {
       margin-left: 40px;
@@ -96,7 +94,7 @@
     font-size: 60px;
     text-transform: lowercase;
     grid-column: 1/-2;
-    @media (max-width: $tablet-width) {
+    @media (max-width: 930px) {
       font-size: 30px;
       grid-column: 1/-1;
     }
@@ -109,11 +107,11 @@
       border-radius: 20px;
       padding: 5px 15px;
       font-size: 15px;
-      @media (max-width: $tablet-width) {
+       @media (max-width: 930px) {
         font-size: 12px;
       }
     }
-    @media (max-width: $tablet-width) {
+    @media (max-width: 930px) {
       justify-self: start;
       grid-column: 1/-1;
     }
@@ -121,7 +119,7 @@
   &__desc {
     grid-column: 1/-2;
     font-size: 20px;
-    @media (max-width: $tablet-width) {
+    @media (max-width: 930px) {
       grid-column: 1/-1;
       font-size: 16px;
     }
@@ -135,7 +133,7 @@
   &__task {
     grid-column: span 2;
     padding-right: 20%;
-    @media (max-width: $tablet-width) {
+    @media (max-width: 930px) {
       grid-column: 1/-1;
       margin-bottom: 60px;
       padding-right: 0;
@@ -164,13 +162,13 @@
         background-image: url("../../images/decor/project_long_stroke.svg");
       }
     }
-    @media (max-width: $tablet-width) {
+    @media (max-width: 930px) {
       grid-column: 1/-1;
     }
   }
   &__text {
     font-size: 18px;
-    @media (max-width: $tablet-width) {
+    @media (max-width: 930px) {
       font-family: $main-font;
       font-size: 16px;
     }
@@ -187,7 +185,7 @@
     &:hover {
       transform: scale(1.05);
     }
-    @media (max-width: $tablet-width) {
+    @media (max-width: 930px) {
       grid-column: 1/-1;
     }
   }
@@ -196,7 +194,7 @@
     font-size: 60px;
     text-transform: lowercase;
     margin-top: 50px;
-    @media (max-width: $tablet-width) {
+    @media (max-width: 930px) {
       font-size: 30px;
       margin-top: 30px;
     }
@@ -207,7 +205,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
     gap: 20px;
-    @media (max-width: $tablet-width) {
+    @media (max-width: 930px) {
       grid-template-columns: repeat(2, 1fr);
     }
   }
@@ -229,21 +227,21 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     gap: 20px;
-    @media (max-width: $tablet-width) {
+    @media (max-width: 930px) {
       grid-template-columns: repeat(2, 1fr);
     }
   }
   &__team-work {
     font-size: 20px;
     margin-bottom: 10px;
-    @media (max-width: $tablet-width) {
+    @media (max-width: 930px) {
       font-size: 16px;
     }
   }
   &__team-name {
     font-family: $main-font;
     font-size: 15px;
-    @media (max-width: $tablet-width) {
+    @media (max-width: 930px) {
       font-size: 12px;
     }
   }
