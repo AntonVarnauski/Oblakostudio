@@ -62,7 +62,8 @@
     }
   }
   &__name {
-    margin-top: 25px
+    margin-top: 25px;
+    text-align: center;
   }
   &__text {
     margin-top: 5px;
@@ -103,9 +104,18 @@
       mask-position: center center;
       background-color: $orange;
       transition: 0.5s;
+      @media (max-width: $tablet-width) {
+        top: -35px;
+        right: -45px;
+        width: 215px;
+        height: 85px;
+      }
     }
     &:hover{
       color: $orange;
+    }
+    @media (max-width: $tablet-width) {
+      font-size: 16px;
     }
   }
 }

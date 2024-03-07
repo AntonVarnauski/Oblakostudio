@@ -19,6 +19,8 @@
 }
 .nav {
   @include flex(row, flex-start, center);
+  position: relative;
+  z-index: 4;
   &__list {
     @include flex();
     width: 615px;
@@ -177,7 +179,7 @@
   @include flex(column, flex-end, center);
   padding: 80px 20px 40px;
   position: absolute;
-  z-index: 1000;
+  z-index: 3;
   top: 0;
   left: 0;
   right: 0;

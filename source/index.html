@@ -21,7 +21,8 @@
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <nav class="mobile__nav">
+    <header class="header header--fixed">
+      <nav class="mobile__nav">
       <ul class="nav__mobile-list list__reset">
         <li class="nav__item">
           <a class="nav__link nav__link--active" href="#production">продакшн</a>
@@ -80,8 +81,7 @@
           </a>
         </li>
       </ul>
-    </nav>
-    <header class="header header--fixed">
+      </nav>
       <nav class="nav">
         <a class="logo" href="index.html">
           <img class="logo__img" src="./images/decor/logo.svg" alt="Логотип студия Облако" width="47" height="34">
@@ -304,9 +304,9 @@
         </article>
         <a class="production__more" href="#!">загрузить ещё</a>
       </section>
-      <section class="serials" id="serials">
+      <section class="serials splide" id="serials">
         <header class="serials__header">
-          <h2 class="serials__title">мульт • веб сериалы</h2>
+          <h2 class="serials__title">мульт • веб&nbsp;сериалы</h2>
           <ul class="serials__filter filter list__reset">
             <li class="filter__item">
               <a class="filter__link" href="#!">#анимация</a>
@@ -316,12 +316,76 @@
             </li>
           </ul>
         </header>
+        <div class="serials__mobile splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <article class="serials__item">
+                <a class="serials__link" href="#!">
+                  <img class="serials__img" src="./images/serial/marily@2x.webp" alt="Мультсериал Мариля" width="371" height="540">
+                  <h3 class="serials__name">Марыля. У пошуках дзіўнікаў</h3>
+                  <p class="serials__text">Мультсериал для видеосервиса VOKA</p>
+                  <p class="serials__category">#мультсериал</p>
+                </a>
+              </article>
+            </li>
+            <li class="splide__slide">
+              <article class="serials__item">
+                <a class="serials__link" href="#!">
+                  <img class="serials__img" src="./images/serial/otryad112@2x.webp" alt="Мультсериал Спецотряд 112" width="371" height="540">
+                  <h3 class="serials__name">Спецотряд 112</h3>
+                  <p class="serials__text">Комедия</p>
+                  <p class="serials__category">#мультсериал</p>
+                </a>
+              </article>
+            </li>
+            <li class="splide__slide">
+              <article class="serials__item">
+                <a class="serials__link" href="#!">
+                  <img class="serials__img" src="./images/serial/volshebnayakniga@2x.webp" alt="Мультсериал Волшебная книга" width="371" height="540">
+                  <h3 class="serials__name">Волшебная книга</h3>
+                  <p class="serials__text">Комедия</p>
+                  <p class="serials__category">#мультсериал</p>
+                </a>
+              </article>
+            </li>
+            <li class="splide__slide">
+              <article class="serials__item">
+                <a class="serials__link" href="#!">
+                  <img class="serials__img" src="./images/serial/zombi@2x.webp" alt="Вебсериал Зомби дед" width="371" height="540">
+                  <h3 class="serials__name">Зомби дед</h3>
+                  <p class="serials__text">Ужасы, комедия</p>
+                  <p class="serials__category">#вебсериал</p>
+                </a>
+              </article>
+            </li>
+            <li class="splide__slide">
+              <article class="serials__item">
+                <a class="serials__link" href="#!">
+                  <img class="serials__img" src="./images/serial/golubi@2x.webp" alt="Вебсериал Голуби" width="371" height="540">
+                  <h3 class="serials__name">Голуби</h3>
+                  <p class="serials__text">Комедия</p>
+                  <p class="serials__category">#мультсериал</p>
+                </a>
+              </article>
+            </li>
+            <li class="splide__slide">
+              <article class="serials__item">
+                <a class="serials__link" href="#!">
+                  <img class="serials__img" src="./images/serial/fuckup@2x.webp" alt="Вебсериал Факап сторис" width="371" height="540">
+                  <h3 class="serials__name">Факап сторис</h3>
+                  <p class="serials__text">Комедия</p>
+                  <p class="serials__category">#мультсериал</p>
+                </a>
+              </article>
+            </li>
+          </ul>
+        </div>
         <article class="serials__item">
           <a class="serials__link" href="#!">
             <img class="serials__img" src="./images/serial/marily@2x.webp" alt="Мультсериал Мариля" width="371" height="540">
             <div class="serials__wrapper">
-              <h3 class="serials__name">Марыля</h3>
-              <p class="serials__text">Комедия</p>
+              <h3 class="serials__name">Марыля. У пошуках дзіўнікаў</h3>
+              <p class="serials__text">Мультсериал для видеосервиса VOKA</p>
               <p class="serials__category">#мультсериал</p>
             </div>
           </a>

@@ -3,15 +3,23 @@
   position: relative;
   padding: 5% 7%;
   overflow: hidden;
-  min-height: 760px;
+  @media (min-width: #{$tablet-width + 1px}) {
+    min-height: 500px;
+  }
   &__title {
     font-size: 60px;
     margin-bottom: 30px;
     text-transform: lowercase;
+    @media (max-width: $tablet-width) {
+      font-size: 30px;
+    }
   }
   &__list {
     align-self: center;
     position: relative;
+    @media (max-width: $tablet-width) {
+      width: 100%;
+    }
   }
   &__item {
     @include flex(row, space-between, center);
@@ -20,6 +28,27 @@
     padding: 5px 15px;
     border-radius: 20px;
     margin-top: 5px;
+    @media (max-width: $tablet-width) {
+      padding: 5px;
+      width: fit-content;
+      position: relative;
+      &:first-child {
+        left: 40%;
+        rotate: 6.5deg;
+      }
+      &:nth-child(2) {
+        rotate: 6.5deg;
+      }
+      &:nth-child(3) {
+        rotate: -0.5deg;
+      }
+      &:nth-child(4) {
+        rotate: 12deg;
+      }
+      &:nth-child(5) {
+        rotate: 13deg;
+      }
+    }
     & .rewards__icon {
       background-image: url("../../images/decor/star@2x.webp");
     }
@@ -46,12 +75,22 @@
     font-size: 14px;
     color: $gray;
     margin-right: 20px;
+    @media (max-width: $tablet-width) {
+      font-size: 10px;
+      margin-right: 5px;
+    }
   }
   &__name {
     font-size: 20px;
     color: $black;
     white-space: nowrap;
     margin-right: 10px;
+    @media (max-width: $tablet-width) {
+      font-size: 14px;
+      margin: 0 5px;
+      text-align: center;
+      white-space: normal;
+    }
   }
   &__icon {
     display: block;
@@ -61,11 +100,18 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center center;
+    @media (max-width: $tablet-width) {
+      width: 15px;
+      height: 15px;
+    }
   }
   &__place {
     font-size: 14px;
     color: $gray;
     white-space: nowrap;
+    @media (max-width: $tablet-width) {
+      font-size: 10px;
+    }
   }
   &__more {
     display: block;
@@ -75,6 +121,11 @@
     text-decoration: none;
     position: relative;
     transition: 0.5s;
+    @media (max-width: $tablet-width) {
+      font-size: 16px;
+      margin-top: 40px;
+      margin-bottom: 30px;
+    }
     &:hover {
       color: $orange;
     }
@@ -89,39 +140,47 @@
       background-image: url("../../images/decor/rewards_stroke.svg");
       background-size: 100% 100%;
       background-repeat: no-repeat;
+      @media (max-width: $tablet-width) {
+        top: -20px;
+        left: -40px;
+        width: 290px;
+        height: 70px;
+      }
     }
   }
 }
 
-.matter {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  margin: 0 auto;
-  height: 2500px;
-  top: -1900px
-}
+@media (min-width: #{$tablet-width + 1px}) {
+  .matter {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    margin: 0 auto;
+    height: 2500px;
+    top: -1900px;
+  }
 
-canvas {
-  position: absolute;
-  z-index: 1;
-  left: 50%;
-  bottom: 0;
-  width: 80%;
-  height: 100%;
-  transform: translateX(-50%);
-  background-color: transparent;
-  opacity: 0;
-}
+  canvas {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    bottom: 0;
+    width: 80%;
+    height: 100%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    opacity: 0;
+  }
 
-[data-object] {
-  --move-x: 0px;
-  --move-y: 0px;
-  --rotate: 0rad;
-  position: absolute;
-  z-index: 2;
-  transform: translate(-50%, -50%) rotate(var(--rotate));
-  top: var(--move-y);
-  left: var(--move-x);
-  pointer-events: none;
+  [data-object] {
+    --move-x: 0px;
+    --move-y: 0px;
+    --rotate: 0rad;
+    position: absolute;
+    z-index: 2;
+    transform: translate(-50%, -50%) rotate(var(--rotate));
+    top: var(--move-y);
+    left: var(--move-x);
+    pointer-events: none;
+  }
 }

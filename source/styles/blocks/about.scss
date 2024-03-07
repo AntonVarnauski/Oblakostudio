@@ -1,6 +1,7 @@
 .about {
   @include flex(column, center, center);
   background-color: $main-color;
+  overflow: hidden;
   padding: 10% 0;
   &__title {
     font-family: $wide-font;
@@ -59,6 +60,7 @@
     }
     @media (max-width: $tablet-width) {
       height: 160px;
+      left: -10px;
     }
   }
   &__btn {
