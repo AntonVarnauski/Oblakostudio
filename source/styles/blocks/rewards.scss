@@ -1,11 +1,8 @@
 .rewards {
   @include flex(column, space-between, flex-start);
   position: relative;
-  padding: 5% 7%;
+  padding: 3% 7%;
   overflow: hidden;
-  // @media (min-width: #{$tablet-width + 1px}) {
-    // min-height: 760px;
-  // }
   &__title {
     font-size: 60px;
     margin-bottom: 30px;
@@ -27,27 +24,9 @@
     border: 1px solid $gray;
     padding: 5px 15px;
     border-radius: 20px;
-    margin-top: 5px;
     @media (max-width: $tablet-width) {
       padding: 5px;
       width: fit-content;
-      position: relative;
-      &:first-child {
-        left: 40%;
-        rotate: 6.5deg;
-      }
-      &:nth-child(2) {
-        rotate: 6.5deg;
-      }
-      &:nth-child(3) {
-        rotate: -0.5deg;
-      }
-      &:nth-child(4) {
-        rotate: 12deg;
-      }
-      &:nth-child(5) {
-        rotate: 13deg;
-      }
     }
     & .rewards__icon {
       background-image: url("../../images/decor/star@2x.webp");
@@ -74,21 +53,24 @@
   &__year {
     font-size: 14px;
     color: $gray;
+    font-family: $main-font;
     margin-right: 20px;
     @media (max-width: $tablet-width) {
-      font-size: 8px;
-      margin-right: 5px;
+      font-size: 6px;
+      margin-right: 2px;
     }
   }
   &__name {
     font-size: 20px;
     color: $black;
+    font-family: $wide-font;
     white-space: nowrap;
     margin-right: 10px;
     @media (max-width: $tablet-width) {
-      font-size: 10px;
-      margin: 0 5px;
+      font-size: 8px;
+      margin: 0 3px;
       text-align: center;
+      font-family: $main-font;
       // white-space: normal;
     }
   }
@@ -101,8 +83,9 @@
     background-size: 100% 100%;
     background-position: center center;
     @media (max-width: $tablet-width) {
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
+      margin-right: 2px;
     }
   }
   &__place {
@@ -110,7 +93,7 @@
     color: $gray;
     white-space: nowrap;
     @media (max-width: $tablet-width) {
-      font-size: 8px;
+      font-size: 6px;
     }
   }
   &__more {
@@ -120,6 +103,7 @@
     color: $black;
     text-decoration: none;
     position: relative;
+    margin-top: 80px;
     transition: 0.5s;
     @media (max-width: $tablet-width) {
       font-size: 16px;
@@ -141,48 +125,44 @@
       background-size: 100% 100%;
       background-repeat: no-repeat;
       @media (max-width: $tablet-width) {
-        top: -20px;
-        left: -40px;
-        width: 290px;
+        top: -22px;
+        left: -20px;
+        width: 255px;
         height: 70px;
       }
     }
   }
 }
 
-// @media (min-width: #{$tablet-width + 1px}) {
-  .matter {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    margin: 0 auto;
-    height: 100%;
-    min-height: 700px;
-    // height: 2500px;
-    // top: -1900px;
-  }
+.matter {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  min-height: 700px;
+}
 
-  canvas {
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    bottom: 0;
-    width: 80%;
-    height: 100%;
-    transform: translateX(-50%);
-    background-color: transparent;
-    opacity: 0;
-  }
+canvas {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: 0;
+  width: 80%;
+  height: 100%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  opacity: 0;
+}
 
-  [data-object] {
-    --move-x: 0px;
-    --move-y: 0px;
-    --rotate: 0rad;
-    position: absolute;
-    z-index: 2;
-    transform: translate(-50%, -50%) rotate(var(--rotate));
-    top: var(--move-y);
-    left: var(--move-x);
-    pointer-events: none;
-  }
-// }
+[data-object] {
+  --move-x: 0px;
+  --move-y: 0px;
+  --rotate: 0rad;
+  position: absolute;
+  z-index: 2;
+  transform: translate(-50%, -50%) rotate(var(--rotate));
+  top: var(--move-y);
+  left: var(--move-x);
+  pointer-events: none;
+}

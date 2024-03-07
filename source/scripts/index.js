@@ -115,8 +115,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
       const runner = Runner.create();
       Runner.run(runner, engine);
-      const placement = {x: 10, y: 10};
-      const spacing = {x: 20, y: 30};
+      const placement = {x: 30, y: 10};
+      const spacing = {x: 30, y: 10};
 
       createBoundingBox();
       addObjects()
