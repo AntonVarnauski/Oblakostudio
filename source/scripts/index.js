@@ -1,10 +1,18 @@
 const menuBtn = document.querySelector('.nav__burger');
 const mobMenu = document.querySelector('.mobile__nav');
+const menuLinks = document.querySelectorAll('.mobile__nav a');
 const bg = document.querySelectorAll('.cloud');
 
 menuBtn.addEventListener('click', () => {
   menuBtn.classList.toggle('nav__burger--open');
   mobMenu.classList.toggle('mobile__nav--open');
+});
+
+menuLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    menuBtn.classList.remove('nav__burger--open');
+    mobMenu.classList.remove('mobile__nav--open');
+  });
 });
 
 for (let i = 0; i < bg.length; i++){

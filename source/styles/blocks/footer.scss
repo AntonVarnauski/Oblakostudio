@@ -31,9 +31,9 @@
     position: relative;
     transition: 0.5s;
     @media (max-width: $tablet-width) {
-      order: 3;
-      margin-top: 40px;
-      margin-bottom: 30px;
+      order: 2;
+      margin-top: 25px;
+      margin-bottom: 45px;
       font-size: 14px;
       color: $main-color;
     }
@@ -110,6 +110,9 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
+    @media (max-width: $tablet-width) {
+      order: 3;
+    }
   }
   &__social-item:last-child {
     grid-column: 1/-1;

@@ -89,6 +89,9 @@
   &:last-of-type {
     margin-left: 50px;
     max-width: 80%;
+    @media (max-width: $tablet-width) {
+      margin-left: 0;
+    }
   }
   @media (max-width: $tablet-width) {
     &:first-of-type{
