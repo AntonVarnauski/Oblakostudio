@@ -60,6 +60,9 @@
     &:hover {
       color: $gray;
     }
+    &__img {
+      width: 100%;
+    }
   }
   &__name {
     margin-top: 25px;
