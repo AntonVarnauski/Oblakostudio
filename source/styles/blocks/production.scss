@@ -71,6 +71,7 @@
   }
   &__text {
     margin-top: 5px;
+    text-align: center;
     @media (max-width: $tablet-width) {
       font-size: 12px;
     }

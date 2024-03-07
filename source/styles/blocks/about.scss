@@ -11,6 +11,9 @@
     text-align: left;
     position: relative;
     margin: 0 10%;
+    @media (max-width: 1350px) {
+      font-size: 100px;
+    }
     &::after {
       content: "";
       position: absolute;
@@ -21,6 +24,10 @@
       background-size: 100% 100%;
       width: 490px;
       height: 150px;
+      @media (max-width: 1350px) {
+        width: 400px;
+        height: 120px;
+      }
       @media (max-width: $tablet-width) {
         background-image: url("../../images/decor/arrow_about_mob.svg");
         width: 180px;
