@@ -75,7 +75,7 @@ window.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  if (window.matchMedia('(min-width: 768px)').matches) {
+  // if (window.matchMedia('(min-width: 768px)').matches) {
     let Engine = null;
     let World = null;
     let engine = null;
@@ -224,7 +224,5 @@ window.addEventListener('DOMContentLoaded', () => {
       }, { threshold: 0.1 })
       observer.observe(document.querySelector('.rewards__list'))
     }
-  }
+  // }
 })
-
-let a = window.matchMedia('(min-width: 768px)');
