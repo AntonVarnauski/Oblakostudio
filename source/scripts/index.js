@@ -3,16 +3,17 @@ const mobMenu = document.querySelector('.mobile__nav');
 const menuLinks = document.querySelectorAll('.mobile__nav a');
 const bg = document.querySelectorAll('.cloud');
 const callBtn = document.querySelector('.footer__callback');
-const closeBtn = document.querySelector('.modal__close');
+const closeBtn = Array.from(document.querySelectorAll('.modal__close'));
 
 callBtn.addEventListener('click', (e) => {
   e.preventDefault();
   document.querySelector('.modal').showModal();
 });
 
-closeBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  document.querySelector('.modal').close();
+closeBtn.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    document.querySelector('.modal').close();
+  });
 });
 
 menuBtn.addEventListener('click', () => {
