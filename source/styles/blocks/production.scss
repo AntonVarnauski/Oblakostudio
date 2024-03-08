@@ -81,16 +81,22 @@
     }
   }
   &__category {
-    margin-top: 10px;
-    color: $gray;
-    font-family: $main-font;
-    text-align: center;
-    transition: 0.5s;
-    &:hover {
-      color: $black;
+    &-list {
+      @include flex(row, center, center);
     }
-    @media (max-width: $tablet-width) {
-      font-size: 12px;
+    &-item{
+      margin-top: 10px;
+      margin-right: 10px;
+      color: $gray;
+      font-family: $main-font;
+      text-align: center;
+      transition: 0.5s;
+      &:hover {
+        color: $black;
+      }
+      @media (max-width: $tablet-width) {
+        font-size: 12px;
+      }
     }
   }
   &__more {
