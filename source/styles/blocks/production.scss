@@ -36,6 +36,9 @@
   }
   &__item {
     @include flex (column, space-between, center);
+    &--hide {
+      display: none;
+    }
   }
   &__anim {
     display: none;

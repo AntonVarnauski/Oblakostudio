@@ -28,6 +28,27 @@ for (let i = 0; i < bg.length; i++){
 }
 
 /* eslint-disable */
+const filter = document.querySelector('.production__filter');
+const filterBtn = Array.from(filter.querySelectorAll('.filter__link'));
+const production = Array.from(document.querySelectorAll('.production__item'));
+
+filterBtn.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    filterBtn.forEach((btn) => {
+      e.preventDefault();
+      btn.classList.remove('filter__link--active');
+    });
+    btn.classList.add('filter__link--active');
+    let data = btn.dataset.filter;
+    production.forEach((item) => {
+      item.classList.remove('production__item--hide');
+      if (!item.classList.contains(data) && data !== 'all') {
+        item.classList.add('production__item--hide');
+      }
+    });
+  });
+});
+
 window.addEventListener('DOMContentLoaded', () => {
   const elms = document.getElementsByClassName('splide');
   const teams = document.getElementsByClassName('team__item');
