@@ -1,5 +1,5 @@
 .about {
-  @include flex(column, center, center);
+  @include flex(column, center, stretch);
   background-color: $main-color;
   overflow: hidden;
   padding: 10% 0;
@@ -39,7 +39,7 @@
         width: 180px;
         height: 75px;
         top: -41%;
-        right: -11%;
+        right: 0;
       }
       @media (max-width: 429px) {
         top: 10%;
