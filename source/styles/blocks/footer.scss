@@ -118,8 +118,11 @@
       left: 0;
       width: 0;
       height: 1px;
-      background-color: $gray;
+      background-color: $orange;
       transition: 0.5s;
+    }
+    &:hover {
+      color: $orange;
     }
     &:hover::after {
       width: 100%;
@@ -160,7 +163,7 @@
       height: 20px;
     }
     &:hover {
-      background-color: $white;
+      background-color: $orange;
     }
   }
   &__develop {
@@ -201,4 +204,8 @@
 .develop_logo {
   color: $gray;
   text-decoration: none;
+  transition: 0.5s;
+  &:hover {
+    color: $orange;
+  }
 }

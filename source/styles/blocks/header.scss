@@ -50,7 +50,7 @@
       left: 0;
       width: 0;
       height: 2px;
-      background-color: $black;
+      background-color: $orange;
       transition: 0.5s;
     }
 
@@ -62,13 +62,13 @@
         left: 0;
         width: 0;
         height: 2px;
-        background-color: $black;
+        background-color: $orange;
         transition: 0.5s;
       }
     }
 
     &:hover {
-      opacity: 0.6;
+      color: $orange;
 
       &::after {
         width: 100%;
@@ -176,7 +176,7 @@
     }
 
     &:hover {
-      opacity: 0.6;
+      background-color: $orange;
       transition: 0.5s;
     }
   }
@@ -264,7 +264,7 @@
   margin-left: 28px;
   letter-spacing: 0.18px;
   &:hover {
-    opacity: 0.6;
+    color: $orange;
   }
   @media (max-width: 1350px) {
     margin-left: 10px;

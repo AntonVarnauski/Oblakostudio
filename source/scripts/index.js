@@ -130,7 +130,7 @@ window.addEventListener('DOMContentLoaded', () => {
       addObjects()
       addMouse()
 
-      const gravity = 0.1
+      const gravity = 0.05
       engine.world.gravity.y = gravity
       Matter.Runner.run(engine)
       Render.run(render)
