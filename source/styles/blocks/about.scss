@@ -94,7 +94,8 @@
       content: "";
       position: absolute;
       top: -34px;
-      right: -36px;
+      right: 50%;
+      transform: translateX(50%);
       width: 285px;
       height: 90px;
       mask-image: url("../../images/decor/stroke_btn.svg");
