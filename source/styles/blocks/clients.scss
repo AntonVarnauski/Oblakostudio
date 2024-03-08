@@ -1,9 +1,10 @@
 .clients {
-  padding: 5% 7%;
+  padding: 5% 0;
   &__title {
     font-size: 60px;
     margin-bottom: 30px;
     text-transform: lowercase;
+    margin-left: 7%;
     @media (max-width: $tablet-width) {
       font-size: 30px;
     }
