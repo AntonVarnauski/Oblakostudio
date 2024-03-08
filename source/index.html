@@ -880,5 +880,35 @@
       <hr>
       <p class="footer__develop">design by NinelSpace | <br class="mobile"> develop by <a class="develop_logo" href="https://t.me/anton_varnauski" target="_blank">Anton Varnauski</a></p>
     </footer>
+    <dialog class="modal">
+      <div class="modal__thanks">
+        <button class="modal__close" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <div class="modal__thanks-wrapper">
+          <p class="modal__thanks-text">Благодарим вас за письмо!</p>
+          <p class="modal__thanks-text">Наш менеджер свяжется с вами в ближайшее время.</p>
+        </div>
+      </div>
+      <form class="modal__form" action="#" method="dialog">
+        <button class="modal__close" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <p class="modal__text">Вам нужна помощь? Отправьте запрос и мы свяжемся с вами в ближайшее время!</p>
+        <label for="name">
+          <span class="visually-hidden">Имя и Фамилия</span>
+          <input type="text" name="name" id="name" placeholder="Имя и Фамилия" autocomplete="on" required>
+        </label>
+        <label for="phone">
+          <span class="visually-hidden">Номер телефона</span>
+          <input type="text" name="phone" id="phone" placeholder="Номер телефона" autocomplete="on" required>
+        </label>
+        <label for="personal" class="form__personal">
+          <input class="personal__input" type="checkbox" name="personal" id="personal" required>
+          <span>Даю согласие на обработку моих <a href="#!" class="personal__link" target="_blank">персональных данных</a></span>
+        </label>
+        <button class="modal__submit" type="submit">перезвоните мне</button>
+      </form>
+    </dialog>
   </body>
 </html>

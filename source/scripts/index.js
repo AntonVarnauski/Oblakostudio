@@ -2,6 +2,18 @@ const menuBtn = document.querySelector('.nav__burger');
 const mobMenu = document.querySelector('.mobile__nav');
 const menuLinks = document.querySelectorAll('.mobile__nav a');
 const bg = document.querySelectorAll('.cloud');
+const callBtn = document.querySelector('.footer__callback');
+const closeBtn = document.querySelector('.modal__close');
+
+callBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  document.querySelector('.modal').showModal();
+});
+
+closeBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  document.querySelector('.modal').close();
+});
 
 menuBtn.addEventListener('click', () => {
   menuBtn.classList.toggle('nav__burger--open');

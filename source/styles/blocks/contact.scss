@@ -245,7 +245,7 @@
   font-size: 12px;
   font-family: $main-font;
   color: $white;
-  margin-left: 7%;
+  margin-left: 8%;
   position: relative;
   & > input {
     margin-right: 20px;
@@ -254,7 +254,7 @@
     content: "";
     display: block;
     position: absolute;
-    left: -8%;
+    left: -9%;
     top: -3px;
     width: 20px;
     height: 20px;
@@ -310,7 +310,6 @@
       left: -35px;
     }
   }
-
 }
 
 .map iframe {
