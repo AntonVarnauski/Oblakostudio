@@ -31,15 +31,28 @@
   }
   &__item {
     position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      margin: auto;
+    &:hover {
+      .reviews__img {
+        filter: blur(0);
+      }
+      .reviews__logo {
+        opacity: 0;
+      }
     }
+  }
+  &__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    opacity: 1;
+    transition: 0.5s;
   }
   &__img {
     width: 100%;
     height: auto;
+    z-index: 2;
     object-fit: cover;
     object-position: center center;
     filter: blur(10px);
