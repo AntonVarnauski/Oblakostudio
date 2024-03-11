@@ -34,9 +34,11 @@
     &:hover {
       .reviews__img {
         filter: blur(0);
+        z-index: 2;
       }
       .reviews__logo {
         opacity: 0;
+        z-index: 1;
       }
     }
   }
@@ -52,6 +54,7 @@
     transition: 0.5s;
   }
   &__img {
+    position: relative;
     width: 100%;
     height: auto;
     z-index: 2;
