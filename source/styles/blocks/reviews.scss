@@ -29,6 +29,14 @@
       font-size: 16px;
     }
   }
+  &__item {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      margin: auto;
+    }
+  }
   &__img {
     width: 100%;
     height: auto;
