@@ -83,6 +83,7 @@ window.addEventListener('DOMContentLoaded', () => {
         type: 'loop',
         padding: { left: '50%', right: '50%' },
         perMove: 1,
+        drag: false,
         arrows: false,
         pagination: false,
         direction: 'rtl',
@@ -90,6 +91,8 @@ window.addEventListener('DOMContentLoaded', () => {
         gap: 50,
         autoScroll: {
           speed: 1,
+          pauseOnHover: false,
+          pauseOnFocus: false,
         },
       }).mount(window.splide.Extensions);
     } else {
@@ -97,12 +100,15 @@ window.addEventListener('DOMContentLoaded', () => {
         type: 'loop',
         padding: { left: '50%', right: '50%' },
         perMove: 1,
+        drag: false,
         arrows: false,
         pagination: false,
         autoWidth: true,
         gap: 50,
         autoScroll: {
           speed: 1,
+          pauseOnHover: false,
+          pauseOnFocus: false,
         },
       }).mount(window.splide.Extensions);
     }
