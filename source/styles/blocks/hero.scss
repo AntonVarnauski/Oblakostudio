@@ -15,9 +15,9 @@
 }
 
 .cloud_1 {
-  background-image: url("../../images/decor/cloud1.svg");
-  width: 269px;
-  height: 150px;
+  background-image: url("../../images/decor/cloud_1.svg");
+  width: 350px;
+  height: 196px;
   position: absolute;
   top: 31%;
   right: 1%;
@@ -28,12 +28,12 @@
 }
 
 .cloud_2 {
-  background-image: url("../../images/decor/cloud2.svg");
-  width: 156px;
-  height: 150px;
+  background-image: url("../../images/decor/cloud_2.svg");
+  width: 358px;
+  height: 181px;
   position: absolute;
-  bottom: 5%;
-  left: 8%;
+  top: 10%;
+  right: 18%;
   display: none;
   @media (min-width: #{$tablet-width + 1px}) {
     display: block;
@@ -41,12 +41,38 @@
 }
 
 .cloud_3 {
-  background-image: url("../../images/decor/cloud3.svg");
-  width: 205px;
-  height: 150px;
+  background-image: url("../../images/decor/cloud_3.svg");
+  width: 557px;
+  height: 407px;
   position: absolute;
-  top: 15%;
-  left: 5%;
+  bottom: 8%;
+  right: 30%;
+  display: none;
+  @media (min-width: #{$tablet-width + 1px}) {
+    display: block;
+  }
+}
+
+.cloud_4 {
+  background-image: url("../../images/decor/cloud_4.svg");
+  width: 441px;
+  height: 393px;
+  position: absolute;
+  top: 35%;
+  left: 2%;
+  display: none;
+  @media (min-width: #{$tablet-width + 1px}) {
+    display: block;
+  }
+}
+
+.cloud_camera {
+  background-image: url("../../images/decor/cloud_camera.svg");
+  width: 439px;
+  height: 439px;
+  position: absolute;
+  top: 35%;
+  left: 2%;
   display: none;
   @media (min-width: #{$tablet-width + 1px}) {
     display: block;
@@ -54,13 +80,14 @@
   &::after {
     content: "";
     position: absolute;
-    top: -30%;
-    right: -10%;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
     background-image: url("../../images/decor/camera.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 200%;
-    height: 200%;
+    width: 100%;
+    height: 100%;
     opacity: 0.1;
     transition: 1s;
   }
@@ -69,16 +96,123 @@
   }
 }
 
-.cloud_4 {
-  background-image: url("../../images/decor/cloud4.svg");
-  width: 298px;
-  height: 150px;
+.cloud_cut {
+  background-image: url("../../images/decor/cloud_cut.svg");
+  width: 270px;
+  height: 283px;
   position: absolute;
-  top: 35%;
-  left: 36%;
+  top: 5%;
+  left: 15%;
   display: none;
   @media (min-width: #{$tablet-width + 1px}) {
     display: block;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background-image: url("../../images/decor/cut.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 80%;
+    height: 80%;
+    opacity: 0.1;
+    transition: 1s;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+.cloud_plansh {
+  background-image: url("../../images/decor/cloud_plansh.svg");
+  width: 417px;
+  height: 267px;
+  position: absolute;
+  top: 9%;
+  right: 2%;
+  display: none;
+  @media (min-width: #{$tablet-width + 1px}) {
+    display: block;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background-image: url("../../images/decor/hamster.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 80%;
+    height: 80%;
+    opacity: 0.1;
+    transition: 1s;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+.cloud_dragon {
+  background-image: url("../../images/decor/cloud_dragon.svg");
+  width: 254px;
+  height: 254px;
+  position: absolute;
+  bottom: 9%;
+  right: 35%;
+  display: none;
+  @media (min-width: #{$tablet-width + 1px}) {
+    display: block;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background-image: url("../../images/decor/dragon.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 70%;
+    height: 70%;
+    opacity: 0.1;
+    transition: 1s;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+.cloud_marilya {
+  background-image: url("../../images/decor/cloud_marilya.svg");
+  width: 408px;
+  height: 408px;
+  position: absolute;
+  bottom: 15%;
+  right: 10%;
+  display: none;
+  @media (min-width: #{$tablet-width + 1px}) {
+    display: block;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background-image: url("../../images/decor/marily.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 70%;
+    height: 70%;
+    opacity: 0.1;
+    transition: 1s;
+  }
+  &:hover::after {
+    opacity: 1;
   }
 }
 
