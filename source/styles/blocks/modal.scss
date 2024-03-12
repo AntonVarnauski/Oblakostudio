@@ -154,14 +154,11 @@
   }
   &__video {
     background-color: $main-color;
-    padding: 1%;
+    padding: 3%;
     width: 80%;
     max-width: 600px;
     border: none;
     border-radius: 10px;
-    @media (max-width: $tablet-width) {
-      padding: 3%;
-    }
     &[open] {
       display: flex;
       margin: auto;
@@ -170,6 +167,10 @@
     &::backdrop {
       background: rgba($color: #000000, $alpha: 0.4);
       backdrop-filter: blur(10px);
+    }
+    & iframe {
+      width: 100%;
+      min-height: 500px;
     }
   }
 }
