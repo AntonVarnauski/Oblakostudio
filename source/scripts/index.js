@@ -1,32 +1,8 @@
-const menuBtn = document.querySelector('.nav__burger');
-const mobMenu = document.querySelector('.mobile__nav');
-const menuLinks = document.querySelectorAll('.mobile__nav a');
+/* eslint-disable */
+const filter = document.querySelector('.production__filter');
+const filterBtn = Array.from(filter.querySelectorAll('.filter__link'));
+const production = Array.from(document.querySelectorAll('.production__item'));
 const bg = document.querySelectorAll('.cloud');
-const callBtn = document.querySelector('.footer__callback');
-const closeBtn = Array.from(document.querySelectorAll('.modal__close'));
-
-callBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  document.querySelector('.modal').showModal();
-});
-
-closeBtn.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    document.querySelector('.modal').close();
-  });
-});
-
-menuBtn.addEventListener('click', () => {
-  menuBtn.classList.toggle('nav__burger--open');
-  mobMenu.classList.toggle('mobile__nav--open');
-});
-
-menuLinks.forEach((link) => {
-  link.addEventListener('click', () => {
-    menuBtn.classList.remove('nav__burger--open');
-    mobMenu.classList.remove('mobile__nav--open');
-  });
-});
 
 for (let i = 0; i < bg.length; i++){
   window.addEventListener('mousemove', (e) => {
@@ -39,11 +15,6 @@ for (let i = 0; i < bg.length; i++){
     }
   });
 }
-
-/* eslint-disable */
-const filter = document.querySelector('.production__filter');
-const filterBtn = Array.from(filter.querySelectorAll('.filter__link'));
-const production = Array.from(document.querySelectorAll('.production__item'));
 
 filterBtn.forEach((btn) => {
   btn.addEventListener('click', (e) => {
