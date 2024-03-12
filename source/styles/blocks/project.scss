@@ -258,4 +258,11 @@
       font-size: 12px;
     }
   }
+  & .production__img {
+    grid-column: 1/-1;
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
 }

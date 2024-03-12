@@ -1,18 +1,19 @@
 .production {
   padding: 5% 7%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 35px 40px;
-  @media (max-width: $tablet-width) {
-    grid-template-columns: 1fr;
-  }
   &--project {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px 40px;
+    @media (max-width: $tablet-width) {
+      grid-template-columns: 1fr;
+    }
     background-color: $white;
   }
   &__header {
     @include flex(row, space-between, center);
     width: 100%;
-    grid-column: 1/-1;
     @media (max-width: $tablet-width) {
       flex-direction: column;
       align-items: flex-start;
@@ -104,6 +105,15 @@
       }
     }
   }
+  & .rows {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px 40px;
+    margin-bottom: 50px;
+    @media (max-width: $tablet-width) {
+      grid-template-columns: 1fr;
+    }
+  }
   &__more {
     grid-column: 1/-1;
     text-decoration: none;
@@ -114,21 +124,21 @@
     font-size: 20px;
     position: relative;
     transition: 0.5s;
+    text-align: center;
     &::before {
       content: "";
       position: absolute;
-      top: -37px;
-      right: -68px;
+      top: 50%;
+      right: 50%;
       width: 285px;
       height: 90px;
       mask-image: url("../../images/decor/stroke_more.svg");
       mask-size: 100% 100%;
       mask-position: center center;
       background-color: $orange;
+      transform: translate(55%, -50%);
       transition: 0.5s;
       @media (max-width: $tablet-width) {
-        top: -35px;
-        right: -45px;
         width: 215px;
         height: 85px;
       }
