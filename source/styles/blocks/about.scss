@@ -61,7 +61,7 @@
   }
   &__line {
     position: relative;
-    height: 320px;
+    height: 300px;
     align-self: flex-start;
     width: 100%;
     &::before {
@@ -75,6 +75,9 @@
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
+    }
+    @media (min-width: 1280px) {
+      height: 500px;
     }
     @media (max-width: $tablet-width) {
       height: 160px;
