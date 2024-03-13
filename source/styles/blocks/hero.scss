@@ -159,10 +159,10 @@
   background-image: url("../../images/decor/cloud_plansh.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  width: 33%;
-  height: 35%;
+  width: 50%;
+  height: 50%;
   position: absolute;
-  top: 5%;
+  top: 0;
   right: -6%;
   display: none;
   @media (min-width: #{$tablet-width + 1px}) {
