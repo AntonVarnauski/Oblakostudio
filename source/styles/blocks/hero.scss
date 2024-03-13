@@ -1,26 +1,44 @@
 .hero {
   @include flex(row, center, center);
-  background-image: url("../../images/decor/divider.svg"), url("../../images/main_bg@2x.webp");
-  background-size: 100% auto, 100% 100%;
-  background-repeat: no-repeat, repeat;
-  background-position: bottom -2px center, center center;
+  background-image: url("../../images/main_bg@2x.webp");
+  background-size: 100% 100%;
+  background-repeat: repeat;
+  background-position: center center;
   width: 100%;
   padding: 25% 7%;
   overflow: hidden;
   position: relative;
   @media (max-width: $tablet-width) {
     height: 100vh;
-    background-size: 100% auto, cover;
+    background-size: cover;
+  }
+  &::after {
+    content: "";
+    width: 100%;
+    height: 23%;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url("../../images/decor/divider.svg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: bottom -2px center;
+    @media (max-width: $tablet-width) {
+      background-size: 100% auto;
+    }
   }
 }
 
 .cloud_1 {
   background-image: url("../../images/decor/cloud_1.svg");
-  width: 350px;
-  height: 196px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 18%;
+  height: 18%;
   position: absolute;
-  top: 31%;
-  right: 1%;
+  top: 12%;
+  right: -2%;
   display: none;
   @media (min-width: #{$tablet-width + 1px}) {
     display: block;
@@ -29,11 +47,13 @@
 
 .cloud_2 {
   background-image: url("../../images/decor/cloud_2.svg");
-  width: 358px;
-  height: 181px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 20%;
+  height: 15%;
   position: absolute;
-  top: 10%;
-  right: 18%;
+  top: 8%;
+  right: 40%;
   display: none;
   @media (min-width: #{$tablet-width + 1px}) {
     display: block;
@@ -42,11 +62,13 @@
 
 .cloud_3 {
   background-image: url("../../images/decor/cloud_3.svg");
-  width: 557px;
-  height: 407px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 35%;
+  height: 35%;
   position: absolute;
   bottom: 8%;
-  right: 30%;
+  right: 20%;
   display: none;
   @media (min-width: #{$tablet-width + 1px}) {
     display: block;
@@ -55,11 +77,13 @@
 
 .cloud_4 {
   background-image: url("../../images/decor/cloud_4.svg");
-  width: 441px;
-  height: 393px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 30%;
+  height: 30%;
   position: absolute;
-  top: 35%;
-  left: 2%;
+  top: -5%;
+  left: -5%;
   display: none;
   @media (min-width: #{$tablet-width + 1px}) {
     display: block;
@@ -68,10 +92,12 @@
 
 .cloud_camera {
   background-image: url("../../images/decor/cloud_camera.svg");
-  width: 439px;
-  height: 439px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 30%;
+  height: 50%;
   position: absolute;
-  top: 35%;
+  bottom: -2%;
   left: 2%;
   display: none;
   @media (min-width: #{$tablet-width + 1px}) {
@@ -98,11 +124,13 @@
 
 .cloud_cut {
   background-image: url("../../images/decor/cloud_cut.svg");
-  width: 270px;
-  height: 283px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 40%;
+  height: 57%;
   position: absolute;
-  top: 5%;
-  left: 15%;
+  top: 2%;
+  left: 5%;
   display: none;
   @media (min-width: #{$tablet-width + 1px}) {
     display: block;
@@ -116,8 +144,8 @@
     background-image: url("../../images/decor/cut.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 80%;
-    height: 80%;
+    width: 60%;
+    height: 60%;
     opacity: 0;
     transition: 1s;
   }
@@ -128,11 +156,13 @@
 
 .cloud_plansh {
   background-image: url("../../images/decor/cloud_plansh.svg");
-  width: 417px;
-  height: 267px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 33%;
+  height: 35%;
   position: absolute;
-  top: 9%;
-  right: 2%;
+  top: 5%;
+  right: -6%;
   display: none;
   @media (min-width: #{$tablet-width + 1px}) {
     display: block;
@@ -158,11 +188,14 @@
 
 .cloud_dragon {
   background-image: url("../../images/decor/cloud_dragon.svg");
-  width: 254px;
-  height: 254px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 20%;
+  height: 35%;
   position: absolute;
-  bottom: 9%;
-  right: 35%;
+  bottom: 8%;
+  right: 42%;
+  z-index: 4;
   display: none;
   @media (min-width: #{$tablet-width + 1px}) {
     display: block;
@@ -188,11 +221,14 @@
 
 .cloud_marilya {
   background-image: url("../../images/decor/cloud_marilya.svg");
-  width: 408px;
-  height: 408px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 35%;
+  height: 50%;
   position: absolute;
-  bottom: 15%;
-  right: 10%;
+  bottom: -2%;
+  right: -2%;
+  z-index: 3;
   display: none;
   @media (min-width: #{$tablet-width + 1px}) {
     display: block;
@@ -220,6 +256,7 @@
   max-width: 20%;
   height: auto;
   margin-bottom: 30px;
+  z-index: 2;
   &:last-of-type {
     margin-left: 50px;
     max-width: 80%;

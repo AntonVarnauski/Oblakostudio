@@ -2,19 +2,19 @@
 const filter = document.querySelector('.production__filter');
 const filterBtn = Array.from(filter.querySelectorAll('.filter__link'));
 const production = Array.from(document.querySelectorAll('.production__item'));
-const bg = document.querySelectorAll('.cloud');
+// const bg = document.querySelectorAll('.cloud');
 
-for (let i = 0; i < bg.length; i++){
-  window.addEventListener('mousemove', (e) => {
-    const x = e.clientX / window.innerWidth;
-    const y = e.clientY / window.innerHeight;
-    if (i % 2 === 1) {
-      bg[i].style.transform = `translate(-${ x * 50 * (i + 0.5) }px, -${ y * 50 * (i + 0.5) }px)`;
-    } else {
-      bg[i].style.transform = `translate(${ x * 50 * (i + 0.5) }px, ${ y * 50 * (i + 0.5) }px)`;
-    }
-  });
-}
+// for (let i = 0; i < bg.length; i++){
+//   window.addEventListener('mousemove', (e) => {
+//     const x = e.clientX / window.innerWidth;
+//     const y = e.clientY / window.innerHeight;
+//     if (i % 2 === 1) {
+//       bg[i].style.transform = `translate(-${ x * 50 * (i + 0.5) }px, -${ y * 50 * (i + 0.5) }px)`;
+//     } else {
+//       bg[i].style.transform = `translate(${ x * 50 * (i + 0.5) }px, ${ y * 50 * (i + 0.5) }px)`;
+//     }
+//   });
+// }
 
 filterBtn.forEach((btn) => {
   btn.addEventListener('click', (e) => {
