@@ -22,6 +22,7 @@
     z-index: 9999;
   }
 }
+
 .nav {
   @include flex(row, flex-start, center);
   position: relative;
@@ -42,7 +43,7 @@
     color: $black;
     position: relative;
     transition: 0.5s;
-
+    text-transform: lowercase;
     &::after {
       content: "";
       position: absolute;
@@ -53,7 +54,6 @@
       background-color: $orange;
       transition: 0.5s;
     }
-
     &--active {
       &::after {
         content: "";
@@ -66,10 +66,8 @@
         transition: 0.5s;
       }
     }
-
     &:hover {
       color: $orange;
-
       &::after {
         width: 100%;
         transition: 0.5s;
@@ -134,6 +132,7 @@
     }
   }
 }
+
 .logo {
   margin-right: 40px;
   transition: 0.5s;
@@ -150,6 +149,7 @@
     height: auto;
   }
 }
+
 .contact {
   &__list {
     @include flex();
@@ -181,6 +181,7 @@
     }
   }
 }
+
 @keyframes mobTran {
   0% {
     transform: translateY(-100vh);
@@ -189,9 +190,10 @@
     transform: translateY(0);
   }
 }
+
 .mobile__nav {
   @include flex(column, flex-end, center);
-  padding: 80px 20px 40px;
+  padding: 70px 20px 60px;
   position: absolute;
   z-index: 3;
   top: 0;
@@ -218,6 +220,7 @@
     margin-bottom: 20px
   }
 }
+
 .mobile-social {
   @include flex();
   @media (min-width: #{$tablet-width + 1px}) {
