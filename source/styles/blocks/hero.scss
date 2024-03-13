@@ -96,9 +96,9 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 30%;
-  height: 50%;
+  height: 55%;
   position: absolute;
-  bottom: -2%;
+  bottom: -9%;
   left: 2%;
   display: none;
   @media (min-width: #{$tablet-width + 1px}) {
@@ -128,10 +128,10 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 40%;
-  height: 57%;
+  height: 70%;
   position: absolute;
-  top: 2%;
-  left: 5%;
+  top: -5%;
+  left: 0;
   display: none;
   @media (min-width: #{$tablet-width + 1px}) {
     display: block;
@@ -145,8 +145,8 @@
     background-image: url("../../images/decor/cut.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 60%;
-    height: 60%;
+    width: 80%;
+    height: 80%;
     opacity: 0;
     transition: 1s;
   }
@@ -191,10 +191,10 @@
   background-image: url("../../images/decor/cloud_dragon.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  width: 20%;
-  height: 35%;
+  width: 27%;
+  height: 45%;
   position: absolute;
-  bottom: 8%;
+  bottom: 5%;
   right: 42%;
   z-index: 4;
   display: none;
@@ -225,10 +225,10 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 35%;
-  height: 50%;
+  height: 60%;
   position: absolute;
   bottom: -2%;
-  right: -2%;
+  right: -1%;
   z-index: 3;
   display: none;
   @media (min-width: #{$tablet-width + 1px}) {
@@ -243,8 +243,8 @@
     background-image: url("../../images/decor/marily.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 70%;
-    height: 70%;
+    width: 80%;
+    height: 80%;
     opacity: 0;
     transition: 1s;
   }
@@ -254,18 +254,18 @@
 }
 
 .hero .logo__img {
-  max-width: 20%;
+  max-width: 17%;
   height: auto;
   margin-bottom: 30px;
-  z-index: 2;
+  z-index: 5;
   &:last-of-type {
     margin-left: 50px;
-    max-width: 80%;
+    max-width: 75%;
     @media (max-width: $tablet-width) {
       margin-left: 0;
     }
   }
-  @media (max-width: $tablet-width) {
+  @media (max-width: 990px) {
     &:first-of-type{
       display: none;
     }
