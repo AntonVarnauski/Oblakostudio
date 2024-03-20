@@ -11,6 +11,7 @@
   &--fixed {
     position: fixed;
     top: 0;
+    backdrop-filter: blur(10px);
     z-index: 9999;
   }
   @media (max-width: 930px) {
