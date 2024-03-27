@@ -94,16 +94,16 @@
         left: auto;
       }
     }
-    &:nth-child(1):after {
+    &:nth-child(n):after {
       transform: rotate(random(360) + deg);
     }
-    &:nth-child(2):after {
+    &:nth-child(2n):after {
       transform: rotate(random(360) + deg);
     }
-    &:nth-child(3):after {
+    &:nth-child(3n):after {
       transform: rotate(random(360) + deg);
     }
-    &:nth-child(4):after {
+    &:nth-child(4n):after {
       transform: rotate(random(360) + deg);
     }
   }
